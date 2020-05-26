@@ -114,6 +114,7 @@
         left:180px;
     }
     #Top{
+        z-index: 5;
         background-size:cover;
         background-repeat: no-repeat;
         background-position:center top;

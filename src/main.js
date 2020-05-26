@@ -5,6 +5,11 @@ import App from './App'
 import router from './router'
 import Utils from './common/utils.js';
 
+import VueAwesomeSwiper from 'vue-awesome-swiper'//swiper组件
+
+
+Vue.use(VueAwesomeSwiper)
+
 Vue.config.productionTip = false;
 Vue.prototype.utils=Utils;
 

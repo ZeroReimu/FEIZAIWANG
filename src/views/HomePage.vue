@@ -30,8 +30,8 @@ export default {
 }
 </script>
 
-<style scoped>
-  div >>> #Footer {
+<style>
+  #Footer {
     width: 100%;
     margin: 0 auto;
     position: fixed;

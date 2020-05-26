@@ -122,7 +122,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
     @import "../assets/Css/Input.css";
     @import "../assets/Css/Drink.css";
     #Top {

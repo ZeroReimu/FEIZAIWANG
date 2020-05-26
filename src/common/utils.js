@@ -10,7 +10,7 @@ export default {
         var Logohref = document.getElementById('TopLogo').href;
         var num = this.sum(0, 10);
         Logohref = "static/bilibili-TV" + num + ".png"
-        console.log(Logohref);
+        //console.log(Logohref);
     },
 
     //重新加载css

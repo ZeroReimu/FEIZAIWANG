@@ -89,7 +89,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   @import "../assets/Css/Input.css";
   #Top {
       /* background: url(../assets/Images/banner-8.png) no-repeat center top; */

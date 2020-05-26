@@ -1,7 +1,8 @@
 <template>
   <div>
     <TopHeader :msg="PhotoMsg"></TopHeader>
-    <Navigatio></Navigatio>
+    <Swiper></Swiper>
+    <!-- <Navigatio></Navigatio> -->
     <Footer></Footer>
   </div>
 
@@ -11,6 +12,8 @@
 import TopHeader from '@/components/TopHeader'
 import Navigatio from '@/components/Navigatio'
 import Footer from '@/components/Footer'
+import Swiper from '@/components/Swiper'
+import 'swiper/css/swiper.css'
 export default {
   name: 'ImageHouse',
   data(){
@@ -26,15 +29,56 @@ export default {
     TopHeader,
     Navigatio,
     Footer,
+    Swiper,
   }
 }
 </script>
 
-<style scoped>
-  div >>> #Footer {
+<style>
+  #Footer {
     width: 100%;
     margin: 0 auto;
     position: fixed;
     bottom: 30.5px;
+    z-index:20;
   }
+  .swiper-wrapper{
+   transition-timing-function:ease-in;
+   
+  }
+  /* 容器大小 */
+  .swiper-container {
+    position:absolute;
+    z-index: 0;
+    margin-top:-230px;
+    width: 100%;
+    height: 105%;
+  }  
+
+  /* 图片样式 */
+  .swiper-slide img{
+    width: 100%;
+    max-width: 100%;
+    /* max-height: 100%; */
+    /* margin-top:-100px; */
+  }
+
+  /* 分页器样式 */
+  .swiper-container{
+    --swiper-navigation-color: #c7e4cd;/* 按钮颜色 */
+    --swiper-navigation-size: 60px;/* 设置按钮大小 */
+  }
+  .swiper-pagination{
+    --swiper-pagination-color: #5acaec;/* 分页器颜色 */
+    --swiper-pagination-size:60px;
+    top:25px;
+  }
+  .swiper-scrollbar{
+    margin-bottom:8px;
+  }
+  .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+  }
+
 </style>
