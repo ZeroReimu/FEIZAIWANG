@@ -23,7 +23,7 @@
             require('../assets/Images/img-4_gaitubao_2567x1492.jpg'),
             require('../assets/Images/img-5_gaitubao_2567x1492.jpg'), 
             require('../assets/Images/img-6_gaitubao_2567x1492.jpg'),
-            require('../assets/Images/img-7.jpg'),
+            require('../assets/Images/img-7_gaitubao_2567x1492.jpg'),
             require('../assets/Images/img-8_gaitubao_2567x1492.jpg'),
             require('../assets/Images/img-9_gaitubao_2567x1492.jpg'),
             require('../assets/Images/img-10_gaitubao_2567x1492.jpg'),
