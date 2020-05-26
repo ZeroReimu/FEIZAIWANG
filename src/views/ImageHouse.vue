@@ -2,7 +2,7 @@
   <div>
     <TopHeader :msg="PhotoMsg"></TopHeader>
     <Swiper></Swiper>
-    <!-- <Navigatio></Navigatio> -->
+    <Navigatio style="display:none"></Navigatio>
     <Footer></Footer>
   </div>
 
@@ -46,7 +46,7 @@ export default {
    transition-timing-function:ease-in;
    
   }
-  /* 容器大小 */
+  /* 容器样式 */
   .swiper-container {
     position:absolute;
     z-index: 0;
@@ -59,8 +59,6 @@ export default {
   .swiper-slide img{
     width: 100%;
     max-width: 100%;
-    /* max-height: 100%; */
-    /* margin-top:-100px; */
   }
 
   /* 分页器样式 */
@@ -70,8 +68,7 @@ export default {
   }
   .swiper-pagination{
     --swiper-pagination-color: #5acaec;/* 分页器颜色 */
-    --swiper-pagination-size:60px;
-    top:25px;
+    top:120px;
   }
   .swiper-scrollbar{
     margin-bottom:8px;

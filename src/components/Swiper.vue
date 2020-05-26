@@ -29,10 +29,11 @@
             require('../assets/Images/img-10_gaitubao_2567x1492.jpg'),
         ],
         swiperOption: {
-          pagination: {
+          swiperContainer:'.swiper-container',//默认容器类型
+          pagination: {//分页器
             el: '.swiper-pagination',
-            dynamicBullets: true,//缩小导航点
-            clickable :true,//点击切换
+            dynamicBullets: true,//启动分页器缩放模式
+            clickable :true,//启动点击切换
           },
           navigation: {//左右箭头
             nextEl: '.swiper-button-next',
@@ -41,35 +42,35 @@
           },
           scrollbar: {//底部滚动条
             el: '.swiper-scrollbar',
-            hide: true,//是否自动隐藏
+            hide: true,//启动自动隐藏
              draggable: true,//允许拖动滚动条
           },
           keyboard : true,//允许键盘操纵
           mousewheel: true,//允许鼠标滚轮操纵
-          swiperContainer:'.swiper-container',//默认容器类型
           initialSlide :0,//设定初始图
           autoplay: {
-            delay:2000,//X秒切换一次
-            disableOnInteraction: false,//手操后不停止
-            // waitForTransition: false,
+            delay:4000,//设定X毫秒切换一次 
+            disableOnInteraction: false,//手动操作不打断计时器
+            waitForTransition: true,//允许计时器未结束操作
           },
-          speed:600,//切换所需时间
+          speed:1500,//设定切换动画所需毫秒
           freeMode : false,//默认完全贴合
           loop : true,//启动循环
-          threshold : 20,//拖动临界值
-          //zoom : true, //开启缩放功能
-          effect : 'fade',//切换效果
+          threshold : 20,//设定拖动最小生效临界值
+          zoom : false, //启动缩放功能
+          effect : 'fade',//设置切换效果'slide'(滑动),"fade"(淡入)"cube"(方块)"coverflow"(3d流)"flip"(3d翻转)
           //direction:'vertical',//设置方向(默认横向)
         },
         
       }
     },
     mounted() {
-      console.log('Current Swiper instance object', this.mySwiper)
-      this.mySwiper.slideTo(1,2000, true)
+      // console.log('Current Swiper instance object', this.mySwiper)
+      // this.mySwiper.slideTo(1,2000, true)
     }
   }
 </script>
+
 <style>
 
 </style>
