@@ -1,6 +1,8 @@
 <template>
   <div>
     <TopHeader :msg="HomeMsg"></TopHeader>
+    <Animation></Animation>
+    <AnimationTyping></AnimationTyping>
     <Navigatio></Navigatio>
     <Footer></Footer>
   </div>
@@ -9,6 +11,8 @@
 
 <script>
 import TopHeader from '@/components/TopHeader'
+import Animation from '@/components/Animation'
+import AnimationTyping from '@/components/AnimationTyping'
 import Navigatio from '@/components/Navigatio'
 import Footer from '@/components/Footer'
 export default {
@@ -24,6 +28,8 @@ export default {
   },
   components:{
     TopHeader,
+    Animation,
+    AnimationTyping,
     Navigatio,
     Footer,
   }
