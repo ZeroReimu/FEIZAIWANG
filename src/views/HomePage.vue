@@ -2,6 +2,9 @@
   <div>
     <TopHeader :msg="HomeMsg"></TopHeader>
     <Animation></Animation>
+    <div>
+      <img v-bind:src="CoKe" style="position:fixed;left:60px;bottom:0px;">
+    </div>
     <AnimationTyping></AnimationTyping>
     <Navigatio></Navigatio>
     <Footer></Footer>
@@ -19,6 +22,7 @@ export default {
   name: 'HomePage',
   data(){
     return{
+      CoKe:require('../assets/Images/CoKe.gif'),
       HomeMsg:{
         TopImg:require('../assets/Images/banner-48.png'),
         TopNavImg:require('../assets/Images/banner-48.png'),
@@ -36,11 +40,5 @@ export default {
 }
 </script>
 
-<style>
-  #Footer {
-    width: 100%;
-    margin: 0 auto;
-    position: fixed;
-    bottom: 30.5px;
-  }
+<style scoped>
 </style>

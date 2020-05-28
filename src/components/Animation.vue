@@ -31,7 +31,7 @@ export default {
         TextI:'何以与君识？无言泪千行',
         TextJ:'--拜伦',
         TextK:'无论刮风还是下雨，太阳照常升起',
-        TextL:'--蕾欧娜'
+        TextL:'--曙光女神·蕾欧娜'
     };
   },
   methods: {
@@ -40,13 +40,13 @@ export default {
 };
 </script>
 
-<style>
-body {
-  overflow: hidden;
-}
+<style scoped>
+
 .company {
+  overflow: hidden;
   width: 100%;
-  margin: 2% auto;
+  height: 825px;
+  margin: 0 auto;
 }
 
 @keyframes TextA {
@@ -60,6 +60,7 @@ body {
   100% {transform: translateX(2000px)translateY(-500px);opacity: 0;color:black}
 }
 .TextA {
+  margin-top: 3%;
   animation: TextA 9s ease-in-out 1;
   animation-iteration-count: infinite;
 }

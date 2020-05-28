@@ -78,7 +78,7 @@ export default {
         TopImg:require('../assets/Images/banner-8.png'),
         TopNavImg:require('../assets/Images/banner-8.png'),
         Logo:require('../assets/Images/logo-8.png'),
-        }
+      }
     };
   },
   components:{
@@ -89,7 +89,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   @import "../assets/Css/Input.css";
   #Top {
       /* background: url(../assets/Images/banner-8.png) no-repeat center top; */
