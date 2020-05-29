@@ -51,7 +51,7 @@ export default {
         this.TextB = "--瓦罗兰之盾·塔里克";
         this.TextReplaceB = "C";
       }else if (this.TextReplaceB == "C") {
-        this.TextA = "敗北した人は誰ですか。すぐに発表します!DIO";
+        this.TextA = "敗北した人は誰ですか。すぐに発表します！DIO";
         this.TextB = "--乔纳森·乔斯达";
         this.TextReplaceB = "A";
       }
