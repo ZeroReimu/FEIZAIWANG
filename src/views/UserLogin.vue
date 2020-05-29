@@ -31,7 +31,7 @@
 
                 <div>
                     <p align="center" style="margin-top:45px">
-                    <input id="cxx" placeholder="  请输入邀请码" style="height:42px; width:450px; border:1px #C7C7C7 solid; border-radius: 3px;">
+                    <input id="cxx" placeholder="  请输入邀请码" style="padding-left:15px;height:42px; width:435px; border:1px #C7C7C7 solid; border-radius: 3px;">
                     <input id="bxx" type="submit" value="自动认证" class="FONT1" >
                     </p>
                     <br><br>

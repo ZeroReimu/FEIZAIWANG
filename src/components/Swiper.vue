@@ -65,8 +65,6 @@
       }
     },
     mounted() {
-      // console.log('Current Swiper instance object', this.mySwiper)
-      // this.mySwiper.slideTo(1,2000, true)
     }
   }
 </script>
