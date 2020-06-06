@@ -5,8 +5,7 @@ Vue.use(Router)
 
 export default new Router({
   base: '/FeiZhai/', 
-  mode:'history',
-
+  // mode:'history',
   routes: [
     {
       path: '/',
