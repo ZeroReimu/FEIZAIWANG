@@ -21,11 +21,11 @@ export default {
   name: "HomePage",
   data() {
     return {
-      CoKe: require("../assets/Images/CoKe.gif"),
+      CoKe: "http://cdn.acgproject.cn/CoKe.gif",
       HomeMsg: {
-        TopImg: require("../assets/Images/banner-48.png"),
-        TopNavImg: require("../assets/Images/banner-48.png"),
-        Logo: require("../assets/Images/logo-48.png")
+        TopImg: "http://cdn.acgproject.cn/banner-48.png",
+        TopNavImg:"http://cdn.acgproject.cn/banner-48.png",
+        Logo: "http://cdn.acgproject.cn/logo-48.png"
       }
     };
   },

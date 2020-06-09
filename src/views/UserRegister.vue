@@ -108,9 +108,9 @@ export default {
   data(){
     return{
       UserRegisterMsg:{
-        TopImg:require('../assets/Images/banner-5.png'),
-        TopNavImg:require('../assets/Images/banner-5.png'),
-        Logo:require('../assets/Images/logo-5.png'),
+        TopImg:"http://cdn.acgproject.cn/banner-5.png",
+        TopNavImg:"http://cdn.acgproject.cn/banner-5.png",
+        Logo:"http://cdn.acgproject.cn/logo-5.png",
       }
     }
   },

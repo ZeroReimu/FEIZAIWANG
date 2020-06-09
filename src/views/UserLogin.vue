@@ -72,12 +72,12 @@ export default {
   name: 'UserLogin',
   data(){
     return{
-      QRcode:require('../assets/Images/二维码.png'),
-      twothree:require('../assets/Images/logo2233.png'),
+      QRcode:"http://cdn.acgproject.cn/QRcode.png",
+      twothree:"http://cdn.acgproject.cn/logo2233.png",
       UserLoginMsg:{
-        TopImg:require('../assets/Images/banner-8.png'),
-        TopNavImg:require('../assets/Images/banner-8.png'),
-        Logo:require('../assets/Images/logo-8.png'),
+        TopImg:"http://cdn.acgproject.cn/banner-8.png",
+        TopNavImg:"http://cdn.acgproject.cn/banner-8.png",
+        Logo:"http://cdn.acgproject.cn/logo-8.png",
       }
     };
   },

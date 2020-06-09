@@ -17,16 +17,16 @@
     data () {
       return {
         banners: [ 
-            require('../assets/Images/img-1_gaitubao_2567x1492.jpg'), 
-            require('../assets/Images/img-2_gaitubao_2567x1492.jpg'), 
-            require('../assets/Images/img-3_gaitubao_2567x1492.jpg'),
-            require('../assets/Images/img-4_gaitubao_2567x1492.jpg'),
-            require('../assets/Images/img-5_gaitubao_2567x1492.jpg'), 
-            require('../assets/Images/img-6_gaitubao_2567x1492.jpg'),
-            require('../assets/Images/img-7_gaitubao_2567x1492.jpg'),
-            require('../assets/Images/img-8_gaitubao_2567x1492.jpg'),
-            require('../assets/Images/img-9_gaitubao_2567x1492.jpg'),
-            require('../assets/Images/img-10_gaitubao_2567x1492.jpg'),
+            "http://cdn.acgproject.cn/img-1_gaitubao_2567x1492.jpg", 
+            "http://cdn.acgproject.cn/img-2_gaitubao_2567x1492.jpg", 
+            "http://cdn.acgproject.cn/img-3_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-4_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-5_gaitubao_2567x1492.jpg", 
+            "http://cdn.acgproject.cn/img-6_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-7_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-8_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-9_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-10_gaitubao_2567x1492.jpg",
         ],
         swiperOption: {
           swiperContainer:'.swiper-container',//默认容器类型
