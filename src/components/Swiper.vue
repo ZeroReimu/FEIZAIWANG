@@ -80,7 +80,7 @@
     z-index: 0;
     margin-top:-230px;
     width: 100%;
-    height: 105%;
+    /* height: 105%; */
   }  
 
   /* 图片样式 */
@@ -99,7 +99,7 @@
     top:120px;
   }
   .swiper-scrollbar{
-    margin-bottom:8px;
+    margin-bottom:7%;
   }
   .swiper-pagination-bullet{
     width: 12px;

@@ -24,5 +24,5 @@ export default {
         link.rel = 'stylesheet';
         link.type = 'text/css';
         head.appendChild(link);
-    }
+    },
 } 

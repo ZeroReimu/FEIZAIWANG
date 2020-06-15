@@ -41,6 +41,15 @@ export default {
     };
   },
   methods: {
+    GetWindowHeight(){//检测页面高度并调整
+      var WindowHeight=window.screen.height;
+      var companyHeight=document.getElementsByClassName("company")[0];
+      if (WindowHeight < 1000){
+        companyHeight.style.cssText="zoom: 0.62;padding-left: 15%";
+      }else{
+        companyHeight.style.cssText="zoom: 0.9;";
+      }
+    },
     TextReplaceA() {
       if (this.TextReplaceB == "A") {
         this.TextA = "最大的悲剧,就是眼看悲剧发生却无能为力。";
@@ -119,6 +128,7 @@ export default {
   },
 
   mounted: function() {
+    this.GetWindowHeight();
     setInterval(() => {
       this.TextReplaceA();
     }, 9000);
@@ -143,11 +153,14 @@ export default {
 
 <style scoped>
 .company {
+  zoom: 0.63;
   overflow: hidden;
   width: 100%;
   height: 825px;
   margin: 0 auto;
+  padding-left: 10%;
 }
+
 
 @keyframes TextA {
   0% {

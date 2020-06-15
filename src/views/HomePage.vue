@@ -2,12 +2,13 @@
   <div>
     <TopHeader :msg="HomeMsg"></TopHeader>
     <Animation></Animation>
-    <div class="Coke">
+    <!-- <div class="Coke">
       <img v-bind:src="CoKe" style="width:100%"/>
-    </div>
+    </div> -->
+    <Footer></Footer>
     <AnimationTyping></AnimationTyping>
     <Navigatio></Navigatio>
-    <Footer></Footer>
+
   </div>
 </template>
 

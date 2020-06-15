@@ -76,7 +76,7 @@
         </div>
     </div>
 
-    <main>
+    <main style="position:absolute;top:330px;">
         <div class="title">吸</div>
         <div class="gaizi"></div>
         <div class="beizi">
@@ -93,8 +93,9 @@
     <h1>肥宅快乐🍋水</h1>
     </main>
 
-    <Navigatio></Navigatio>
+    
     <Footer></Footer>
+    <Navigatio></Navigatio>
   </div>
 
 </template>
@@ -126,11 +127,7 @@ export default {
     @import "../assets/Css/Input.css";
     @import "../assets/Css/Drink.css";
     #Top {
-        /* background: url(Images/banner-5.png) no-repeat center top; */
         background-size: cover;
-    }
-    div >>> #Footer {
-        margin-top: 248px;
     }
     .One1 {
         margin-left: 310px;

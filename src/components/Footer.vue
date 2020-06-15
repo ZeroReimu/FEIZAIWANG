@@ -21,16 +21,15 @@ export default {
 
 <style scoped>
   #Footer {
+    position: relative;
     text-align: center;
-      font-family: Sans-serif;
-      font-size: 15px;
-      font-weight: 200px;
-      line-height: 28px;
-      position: fixed;
-      bottom:25px;
-      width: 100%;
-      margin: 20 auto;
-      z-index:20;
-      /* box-shadow: 10px 2px 20px #7d7d7d; */
+    font-family: Sans-serif;
+    font-size: 15px;
+    line-height: 28px;
+    width: 100%;
+    margin: 0 auto;
+    z-index:20;
+    padding-bottom:15px;
+    /* box-shadow: 10px 2px 20px #7d7d7d; */
   }
 </style>

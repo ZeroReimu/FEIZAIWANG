@@ -13,7 +13,7 @@
                             <li><a href=''>收录</a></li>
                         </ul>
                     </li>
-                    <li class='One'><a href=''>作业</a>
+                    <li class='One'><a href=''>创意</a>
                         <ul>
                             <li><a href=''>2.1</a></li>
                             <li><a href=''>2.2</a></li>
@@ -29,7 +29,7 @@
                             <li><a href=''>3.3</a></li>
                         </ul>
                     </li>
-                    <li class='One'><a href=''>心得</a>
+                    <li class='One'><a href=''>日记</a>
                         <ul>
                             <li><a href=''>4.1</a></li>
                             <li><a href=''>4.2</a></li>

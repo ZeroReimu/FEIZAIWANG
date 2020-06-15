@@ -44,22 +44,24 @@
                 <br><br><br>
                 <center><input id="axx" type="submit" value="立即登录" class="FONT2"></center>     
             </div>
+
         </div>
+                    
     </div>
-    <div id="Erweima">
-        <img v-bind:src="QRcode" style="margin-left: 170px"><br>
-        <img v-bind:src="twothree">
-    </div>
-    <div id="Erweikuang">
-        <p style="font-size:20px;">扫描二维码登陆</p>
-        <br>
-        <p style="font-size:15px;color:gray">请使用
-        <a href="https://app.bilibili.com/" style="color:#6DD2F7">哔哩哔哩客户端</a>
-        <br>扫码登录<br>或扫码下载APP
-        </p>
-    </div>
-    <Navigatio></Navigatio>
+<div id="Erweima">
+                <img v-bind:src="QRcode" style="margin-left: 170px"><br>
+                <img v-bind:src="twothree">
+            </div>
+            <div id="Erweikuang">
+                <p style="font-size:20px;">扫描二维码登陆</p>
+                <br>
+                <p style="font-size:15px;color:gray">请使用
+                <a href="https://app.bilibili.com/" style="color:#6DD2F7">哔哩哔哩客户端</a>
+                <br>扫码登录<br>或扫码下载APP
+                </p>
+            </div>
     <Footer></Footer>
+    <Navigatio></Navigatio>
   </div>
 
 </template>
@@ -95,20 +97,22 @@ export default {
       /* background: url(../assets/Images/banner-8.png) no-repeat center top; */
       background-size: cover;
   }
-  div >>> #Footer {
+  /* div >>> #Footer {
       margin-top: 328px;
-  }
+  } */
   #Erweima {
-      margin-top: -10px;
-      margin-left: 60px;
+      top: 350px;
+      left: 30px;
+      position: absolute;
   }
 
   #Erweikuang {
       width: 200px;
       height: 50px;
-      margin-top: -150px;
-      margin-left: 200px;
+      top: 510px;
+      left:170px;
       text-align: center;
+      position: absolute;
   }
   .One1 {
       margin-left: 310px;
@@ -135,8 +139,5 @@ export default {
       font-size: 17px;
       line-height: 32px;
       margin: 4px auto 6px 320px;
-  }
-  #Footer{
-      margin-top:350px;
   }
 </style>

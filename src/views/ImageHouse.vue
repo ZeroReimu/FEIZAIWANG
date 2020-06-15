@@ -2,8 +2,8 @@
   <div>
     <TopHeader :msg="PhotoMsg"></TopHeader>
     <Swiper></Swiper>
-    <Navigatio style="display:none"></Navigatio>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
+    <!-- <Navigatio></Navigatio> -->
   </div>
 
 </template>
@@ -19,9 +19,9 @@ export default {
   data(){
     return{
       PhotoMsg:{
-        TopImg:"http://cdn.acgproject.cn/banner48.png",
-        TopNavImg:"http://cdn.acgproject.cn/banner48.png",
-        Logo0:"http://cdn.acgproject.cn/banner-48.png",
+        TopImg:"http://cdn.acgproject.cn/banner-48.png",
+        TopNavImg:"http://cdn.acgproject.cn/banner-48.png",
+        Logo0:"http://cdn.acgproject.cn/logo-48.png",
       }
     }
   },
