@@ -1,67 +1,64 @@
 <template>
   <div>
     <TopHeader :msg="UserLoginMsg"></TopHeader>
-      <div id="zhong2">
 
-        <div id="zhongxia">
-            <div id="zhongxiaziti"><br>
+    <div id="main">
 
-                <p align="center">
-                    <font size="+3">登陆</font>
-                </p><br>
+        <div>
 
-                <div class="Box1">
-                    <div class="One1">
-                        <label for="name"></label>
+            <div>
+                <p style="color:black"><font size="+3">登陆</font></p>
 
-                        <input type="text" id="Input1" name="name" placeholder="  账号/邮箱/手机" autocomplete="off"
-                            maxlength="20">
-
-                        <i>&nbsp;</i>
-                    </div>
-                </div>
-
-                <div class="Box2">
-                    <div class="One1" style="margin-top:45px">
-                        <label for="password"></label>
-                        <input id="Input2" type="password" placeholder="  密码(6-16个字符组成，区分大小写)" autocomplete="off"
-                            maxlength="20">
-                    </div>
+                <div>
+                    <input id="username" type="text"  name="name" placeholder="账号/邮箱/手机" maxlength="20">
                 </div>
 
                 <div>
-                    <p align="center" style="margin-top:45px">
-                    <input id="cxx" placeholder="  请输入邀请码" style="padding-left:15px;height:42px; width:435px; border:1px #C7C7C7 solid; border-radius: 3px;">
-                    <input id="bxx" type="submit" value="自动认证" class="FONT1" >
-                    </p>
-                    <br><br>
+                    <input id="password" type="password" placeholder="密码(6-16个字符组成，区分大小写)" maxlength="20">
                 </div>
-                <p align="center"><input type="checkbox">
-                    <font color="black " size="-1" face="Lucida Console">我已同意</font>
-                        <font color="#6DD2F7" size="-1" face="Lucida Console">《哔哩哔哩弹幕网用户使用协议》</font>和
-                        <font color="#6DD2F7" size="-1" face="Lucida Console">《哔哩哔哩弹幕网账号中心规范》</font>
+
+                <div>
+                    <div id="code">
+                        <input placeholder="  请输入邀请码">
+                        <input type="submit" value="自动认证" class="button" >
+                    </div>
+                </div>
+
+                <p class="msg"><input type="checkbox">
+                    <font color="black"   size="-1" face="Lucida Console">我已同意</font>
+                    <font color="#6DD2F7" size="-1" face="Lucida Console">《哔哩哔哩弹幕网用户使用协议》</font>
+                    <font color="black"   size="-1" face="Lucida Console">和</font>
+                    <font color="#6DD2F7" size="-1" face="Lucida Console">《哔哩哔哩弹幕网账号中心规范》</font>
                 </p>
-                <br><br><br>
-                <center><input id="axx" type="submit" value="立即登录" class="FONT2"></center>     
+
+                <center><input type="submit" value="立即登录" class="loginbutton"></center>   
+
             </div>
 
         </div>
                     
     </div>
-<div id="Erweima">
-                <img v-bind:src="QRcode" style="margin-left: 170px"><br>
-                <img v-bind:src="twothree">
-            </div>
-            <div id="Erweikuang">
-                <p style="font-size:20px;">扫描二维码登陆</p>
-                <br>
-                <p style="font-size:15px;color:gray">请使用
-                <a href="https://app.bilibili.com/" style="color:#6DD2F7">哔哩哔哩客户端</a>
-                <br>扫码登录<br>或扫码下载APP
-                </p>
-            </div>
+
+    <div id="Erweima">
+        <img v-bind:src="QRcode" style="margin-left: 170px"><br>
+        <img v-bind:src="twothree">
+    </div>
+
+    <div id="Erweikuang">
+        <p style="font-size:20px;">扫描二维码登陆</p>
+        <br>
+        <p style="font-size:15px;color:gray">请使用<a href="https://app.bilibili.com/" style="color:#6DD2F7">哔哩哔哩客户端</a>
+            <br>
+            扫码登录
+            <br>
+            或扫码下载APP
+        </p>
+    </div>
+
     <Footer></Footer>
+
     <Navigatio></Navigatio>
+
   </div>
 
 </template>
@@ -83,6 +80,24 @@ export default {
       }
     };
   },
+  methods:{
+    //检测页面高度并调整
+    GetWindowHeight(){
+        var WindowHeight=window.screen.height;
+        var ErweimaHeight=document.getElementById("Erweima");
+        var ErweikuangHeight=document.getElementById("Erweikuang");
+        if (WindowHeight < 1000){
+            ErweimaHeight.style.cssText="zoom: 0.85;margin-top:5%";
+            ErweikuangHeight.style.cssText="zoom: 0.85;margin-top:5%";
+        }else{
+            ErweimaHeight.style.cssText="zoom: 1;";
+            ErweikuangHeight.style.cssText="zoom: 1;";
+        }
+    },
+  },
+  mounted:function(){
+      this.GetWindowHeight();
+  },
   components:{
     TopHeader,
     Navigatio,
@@ -92,52 +107,106 @@ export default {
 </script>
 
 <style scoped>
-  @import "../assets/Css/Input.css";
-  #Top {
-      /* background: url(../assets/Images/banner-8.png) no-repeat center top; */
+    #Top {
       background-size: cover;
-  }
-  /* div >>> #Footer {
-      margin-top: 328px;
-  } */
-  #Erweima {
-      top: 350px;
-      left: 30px;
+    }
+    #Erweima {
+      top: 400px;
+      left: 40px;
       position: absolute;
-  }
+    }
 
-  #Erweikuang {
+    #Erweikuang {
       width: 200px;
       height: 50px;
       top: 510px;
       left:170px;
       text-align: center;
       position: absolute;
-  }
-  .One1 {
-      margin-left: 310px;
-  }
-  .One1.right i {
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      float: right;
-      margin: 13px auto auto 10px;
-  }
-  ;
-  .One1 label {
-      width: 85px;
-      height: 14px;
-      padding: 20px;
-  }
-  .One1 input {
-      font-size: 16px;
-  }
-  .Msg {
-      width: 500px;
-      height: 32px;
-      font-size: 17px;
-      line-height: 32px;
-      margin: 4px auto 6px 320px;
-  }
+    }
+
+    #main{
+        margin:0 auto;
+        height: 690px;
+        width: 1300px;
+        font-family:"华文楷体";
+        position: relative;
+    }   
+
+    #main> div{ 
+        margin-left:80px;
+        margin-top: 10px;
+        width:1120px;
+        height: 690px;
+        text-align: center;
+    }   
+
+    #main> div > div{
+        font-size: 18px;
+        color: #6DD2F7;
+        font-family: '华文楷体';
+        text-indent: 1em;
+        margin-top:65px;
+    }   
+
+    #main> div > div> .msg{
+        margin-top:50px;
+    }   
+
+    input {
+        font-size: 16px;
+    }
+
+    #username,#password{
+        height:42px;
+        width:435px;
+        border:1px #C7C7C7 solid;
+        border-radius: 3px;
+        padding-left:15px;
+        margin-top:45px;
+    }   
+
+    #code{
+        margin-top:45px;
+    }
+
+    #code>input:first-child {
+        padding-left:15px;
+        height:42px; width:435px; 
+        border:1px #C7C7C7 solid; 
+        border-radius: 3px;
+    }   
+
+    .button {
+        font-size:14px;
+        color:#FFFFFF;
+        width:126px;
+        height:44.3px;
+        background:#4FB9EC;
+        margin-left:-130px;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.1);
+        transition: all .5s;
+        line-height: 2px;
+    }   
+
+    .button:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    }   
+
+    .loginbutton {
+        margin-top:70px;
+        font-size:17px;
+        color:#FFFFFF;
+        width:452px;
+        height:42px;
+        background:#4FB9EC;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.1);
+        transition: all .5s;
+    }   
+
+    .loginbutton:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    }
 </style>

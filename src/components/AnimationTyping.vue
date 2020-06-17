@@ -33,7 +33,7 @@ export default {
   animation: color_change 26s steps(16), caret 1.2s steps(1) infinite;
   animation-iteration-count: infinite;
   position: fixed;
-  left: 82%;
+  left: 80%;
   bottom: 35px;
   font-size: 1.2em;
 }

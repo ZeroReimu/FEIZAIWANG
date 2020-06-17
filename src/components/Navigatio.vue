@@ -23,7 +23,7 @@ export default {
   },
     methods:{
 
-        //浮动栏适配
+        //浮动栏滚动适配
         input() {
             var Navigatio = document.getElementById('Navigatio');
             var marginTop = document.documentElement.scrollTop;
@@ -34,9 +34,9 @@ export default {
             };
         },
 
-        GetWindowHeight(){//检测页面高度并调整
+        //检测页面高度并调整
+        GetWindowHeight(){
             var WindowHeight=window.screen.height;
-            // var navigatioHeight=document.getElementById("Navigatio")[0];
             if (WindowHeight < 1000){
                 Navigatio.style.cssText="zoom: 0.9;left: 84%;";
             }else{
@@ -46,7 +46,6 @@ export default {
 
     },
     mounted:function(){
-        //setInterval('input();', 10);
         this.timer = setInterval(this.input, 10);
         this.GetWindowHeight();
     }

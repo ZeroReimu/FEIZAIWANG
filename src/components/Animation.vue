@@ -41,7 +41,8 @@ export default {
     };
   },
   methods: {
-    GetWindowHeight(){//检测页面高度并调整
+    //检测页面高度并调整
+    GetWindowHeight(){
       var WindowHeight=window.screen.height;
       var companyHeight=document.getElementsByClassName("company")[0];
       if (WindowHeight < 1000){
@@ -50,6 +51,8 @@ export default {
         companyHeight.style.cssText="zoom: 0.9;";
       }
     },
+ 
+    //第一处文本替换
     TextReplaceA() {
       if (this.TextReplaceB == "A") {
         this.TextA = "最大的悲剧,就是眼看悲剧发生却无能为力。";
@@ -66,6 +69,7 @@ export default {
       }
     },
 
+    //第二处文本替换
     TextReplaceC() {
       if (this.TextReplaceD == true) {
         this.TextC = "吾心吾行,澄如明镜,所作所为皆为『正義』";
@@ -78,6 +82,7 @@ export default {
       }
     },
 
+    //以此类推
     TextReplaceE() {
       if (this.TextReplaceF == true) {
         this.TextE = "我终此一生，就是为了摆脱他人的期待，找到真实的自己";
@@ -128,7 +133,9 @@ export default {
   },
 
   mounted: function() {
+
     this.GetWindowHeight();
+
     setInterval(() => {
       this.TextReplaceA();
     }, 9000);
@@ -147,8 +154,10 @@ export default {
     setInterval(() => {
       this.TextReplaceK();
     }, 9000);
+
   }
 };
+
 </script>
 
 <style scoped>

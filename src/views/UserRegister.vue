@@ -1,47 +1,24 @@
 <template>
   <div>
     <TopHeader :msg="UserRegisterMsg"></TopHeader>
-        <div id="zhong2">
 
-        <div id="zhongxia">
-            <div id="zhongxiaziti"><br>
+    <div id="main">
 
-                <p align="center">
-                    <font size="+3">加入我们</font>
-                </p><br>
+        <div>
 
-                <div class="Box1">
-                    <div class="One1">
-                        <label for="name"></label>
+            <div>
+                <p><font size="+3" color="black">加入我们</font></p>
 
-                        <input type="text" id="Input1" name="name" placeholder="  昵称(例：哔哩哔哩)" autocomplete="off"
-                            maxlength="20">
-
-                        <!-- <i>&nbsp;</i> -->
-                    </div>
-                    <div class="Msg">
-                        <i style="margin-left:5px"></i>
-                        <span></span>
-                    </div>
+                <div>
+                    <input id="username" type="text" name="name" placeholder="昵称(例：哔哩哔哩)" maxlength="20">
                 </div>
 
-                <div class="Box2">
-                    <div class="One1">
-                        <label for="password"></label>
-
-                        <input id="Input2" type="password" placeholder="  密码(6-16个字符组成，区分大小写)" autocomplete="off"
-                            maxlength="20">
-
-                        <!-- <i>&nbsp;</i> -->
-                    </div>
-                    <div class="Msg">
-                        <i style="margin-left:5px"></i>
-                        <span></span>
-                    </div>
+                <div>
+                    <input id="password" type="password" placeholder="密码(6-16个字符组成，区分大小写)" maxlength="20">
                 </div>
 
-                <div class="One1">
-                    <select name="cars" style="height:41px; width:101px; border:1px #C7C7C7 solid; border-radius: 3px;">
+                <div>
+                    <select name="cars">
                         <option value="1">中国大陆</option>
                         <option value="2">香港特别行政区</option>
                         <option value="3">澳门特别行政区</option>
@@ -55,25 +32,34 @@
                         <option value="11">韩国</option>
                         <option value="12">马来西亚</option>
                     </select>
-                    <input id="Input3" type="text" placeholder="  填写常用手机号哟">
+                    <input id="phone" type="text" placeholder="  填写常用手机号哟">
                 </div>
-                <p align="right" style="margin-right:300px; margin-top:14px;">
+
+                <p class="email" align="right">
                     <font size="-1" color="#1DA3F8">
-
-                        <a href="https://passport.bilibili.com/register/mail.html">用邮箱注册>></a></font>
+                    <a href="https://passport.bilibili.com/register/mail.html">用邮箱注册>></a></font>
                 </p>
 
-                <p align="center" style="margin-top:15px"><input type="text" placeholder="  获取验证码"
-                        style="height:42px; width:450px; border:1px #C7C7C7 solid; border-radius: 3px;">
-                    <input id="xx" type="submit"  value="点击获取" class="FONT1"></p><br><br>
+                <div>
+                    <div id="code">
+                        <input placeholder="  请输入邀请码">
+                        <input type="submit" value="点击获取" class="button" >
+                    </div>
+                </div>
 
-                <p align="center"><input type="checkbox">
-                    <font size="-1" face="Lucida Console">我已同意<font color="#6DD2F7">《哔哩哔哩弹幕网用户使用协议》</font>和<font color="#6DD2F7">《哔哩哔哩弹幕网账号中心规范》</font></font>
+                <p class="msg"><input type="checkbox">
+                    <font color="black"   size="-1" face="Lucida Console">我已同意</font>
+                    <font color="#6DD2F7" size="-1" face="Lucida Console">《哔哩哔哩弹幕网用户使用协议》</font>
+                    <font color="black"   size="-1" face="Lucida Console">和</font>
+                    <font color="#6DD2F7" size="-1" face="Lucida Console">《哔哩哔哩弹幕网账号中心规范》</font>
                 </p>
-                <br><br><br>
-                <center><input id="yy" type="submit"  value="立即注册" class="FONT2"></center>
+
+                <center><input class="loginbutton" type="submit"  value="立即注册" ></center>
+
             </div>
+
         </div>
+        
     </div>
 
     <main style="position:absolute;top:330px;">
@@ -90,7 +76,7 @@
         </div>
         <div class="xiguan1"></div>
         <div class="xiguan2"></div><br><br>
-    <h1>肥宅快乐🍋水</h1>
+        <h1>肥宅快乐🍋水</h1>
     </main>
 
     
@@ -124,64 +110,116 @@ export default {
 </script>
 
 <style scoped>
-    @import "../assets/Css/Input.css";
     @import "../assets/Css/Drink.css";
     #Top {
         background-size: cover;
     }
-    .One1 {
-        margin-left: 310px;
+
+    #main{
+        margin:0 auto;
+        height: 680px;
+        width: 1300px;
+        font-family:"华文楷体";
+        position: relative;
     }
-    .One1.error {
-        border: thin solid #f00
+
+    #main> div{ 
+        margin-left:80px;
+        margin-top: 10px;
+        width:1120px;
+        height: 690px;
+        text-align: center;
     }
-    .One1.right i {
-        width: 20px;
-        height: 20px;
-        background: url(../assets/Images/Right.png) no-repeat;
-        position: absolute;
-        float: right;
-        margin: 13px auto auto 10px;
+
+    #main> div > div{
+        font-size: 18px;
+        color: #6DD2F7;
+        font-family: '华文楷体';
+        text-indent: 1em;
+        margin-top:60px;
+        text-align: center;
     }
-    ;
-    .One1 label {
-        width: 85px;
-        height: 14px;
-        padding: 20px;
+
+    #main> div > div> .msg{
+        margin-top:50px;
     }
-    .One1 input {
+
+    input {
         font-size: 16px;
     }
-    .Msg {
-        width: 500px;
-        height: 32px;
-        font-size: 17px;
-        line-height: 32px;
-        margin: 4px auto 6px 320px;
+    
+    #username,#password{
+        height:42px;
+        width:435px;
+        border:1px #C7C7C7 solid;
+        border-radius: 3px;
+        padding-left:15px;
+        margin-top:45px;
     }
-    .Msg i {
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 5px
+
+    #phone{
+        height:42px;
+        width:330px;
+        border:1px #C7C7C7 solid;
+        border-radius: 3px;
+        padding-left:15px;
     }
-    .Msg span {
-        color: #ccc;
-        width: 200px
+
+    select{
+        height:44px;
+        width:101px; 
+        border:1px #C7C7C7 solid; 
+        border-radius: 3px;
+        margin-top: 45px;
     }
-    .Msg.default i {
-        background: url(../assets/Images/Default.png)no-repeat center center;
-        text-align: center
+
+    .email{
+        margin-right:300px; 
+        margin-top:15px;
     }
-    .Msg.hide {
-        display: none
+
+    #code{
+        margin-top:15px; 
     }
-    .Msg.error i {
-        background: url(../assets/Images/Error.png)no-repeat center center;
-        text-align: center
+
+    #code>input:first-child {
+        padding-left:15px;
+        height:42px; width:435px; 
+        border:1px #C7C7C7 solid; 
+        border-radius: 3px;
     }
-    .Msg.error span {
-        color: #f00;
+
+    .button {
+        font-size:14px;
+        color:#FFFFFF;
+        width:126px;
+        height:44.3px;
+        background:#4FB9EC;
+        margin-left:-130px;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.1);
+        transition: all .5s;
+        line-height: 2px;
     }
+
+    .button:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    }
+
+    .loginbutton {
+        margin-top:40px;
+        font-size:17px;
+        color:#FFFFFF;
+        width:452px;
+        height:42px;
+        background:#4FB9EC;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.1);
+        transition: all .5s;
+    }
+
+    .loginbutton:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    }
+
 </style>

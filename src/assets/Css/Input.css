@@ -6,43 +6,83 @@
  * @date    2018-06-04 09:03:13
  * @version $Id$
  */
-    #zhong2{
-        margin-left: auto;
-        margin-right: auto;
-        height: 700px;
+    #main{
+        margin:0 auto;
+        height: 680px;
         width: 1300px;
         font-family:"华文楷体";
         position: relative;
     }
 
-    #zhongxia{
+    #main> div{ 
         margin-left:80px;
         margin-top: 10px;
         width:1120px;
         height: 690px;
+        text-align: center;
     }
 
-    #zhongxiadazi{
-        margin-left:5px;
-        font-size: 20px;
+    #main> div > div{
+        font-size: 18px;
         color: #6DD2F7;
         font-family: '华文楷体';
         text-indent: 1em;
+        margin-top:60px;
+        text-align: center;
     }
 
-    #zhongxiaziti{
-        text-indent: 2em;
-        font-family:'华文楷体';
-        font-size: 17px;
-        margin-top:35px;
-        margin-left:0px;
-        margin-right:12px;
+    #main> div > div> .msg{
+        margin-top:50px;
     }
 
-    .FONT1 {
+    input {
+        font-size: 16px;
+    }
+    
+    #username,#password{
+        height:42px;
+        width:435px;
+        border:1px #C7C7C7 solid;
+        border-radius: 3px;
+        padding-left:15px;
+        margin-top:45px;
+    }
+
+    #phone{
+        height:42px;
+        width:330px;
+        border:1px #C7C7C7 solid;
+        border-radius: 3px;
+        padding-left:15px;
+    }
+
+    select{
+        height:41px;
+        width:101px; 
+        border:1px #C7C7C7 solid; 
+        border-radius: 3px;
+        margin-top: 45px;
+    }
+
+    .email{
+        margin-right:300px; 
+        margin-top:15px;
+    }
+
+    #code{
+        margin-top:15px; 
+    }
+    #code>input:first-child {
+        padding-left:15px;
+        height:42px; width:435px; 
+        border:1px #C7C7C7 solid; 
+        border-radius: 3px;
+    }
+
+    .button {
         font-size:14px;
         color:#FFFFFF;
-        width:130px;
+        width:126px;
         height:44.3px;
         background:#4FB9EC;
         margin-left:-130px;
@@ -52,12 +92,13 @@
         line-height: 2px;
     }
 
-    .FONT1:hover {
+    .button:hover {
         box-shadow: 0 5px 15px rgba(0,0,0,.3);
     }
 
-    .FONT2 {
-        font-size:14px;
+    .loginbutton {
+        margin-top:40px;
+        font-size:17px;
         color:#FFFFFF;
         width:452px;
         height:42px;
@@ -66,26 +107,8 @@
         box-shadow: 0 1px 3px rgba(0,0,0,.1);
         transition: all .5s;
     }
-    .FONT2:hover {
+
+    .loginbutton:hover {
         box-shadow: 0 5px 15px rgba(0,0,0,.3);
     }
-    #Input1{
-        height:42px;
-        width:435px;
-        border:1px #C7C7C7 solid;
-        border-radius: 3px;
-        padding-left:15px;
-    }
-    #Input2{
-        height:42px;
-        width:435px;
-        border:1px #C7C7C7 solid;
-        border-radius: 3px;
-        padding-left:15px;
-    }
-    #Input3{
-        height:42px;
-        width:345px;
-        border:1px #C7C7C7 solid;
-        border-radius: 3px;
-    }
+
