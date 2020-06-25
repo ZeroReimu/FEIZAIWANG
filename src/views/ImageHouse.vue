@@ -3,7 +3,7 @@
     <TopHeader :msg="PhotoMsg"></TopHeader>
     <Swiper></Swiper>
     <!-- <Footer></Footer> -->
-    <!-- <Navigatio></Navigatio> -->
+    <Navigatio style="display:none"></Navigatio>
   </div>
 
 </template>

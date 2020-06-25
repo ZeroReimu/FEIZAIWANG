@@ -40,7 +40,7 @@
     </div>
 
     <div id="Erweima">
-        <img v-bind:src="QRcode" style="margin-left: 170px"><br>
+        <img v-bind:src="QRcode"><br>
         <img v-bind:src="twothree">
     </div>
 
@@ -86,12 +86,12 @@ export default {
         var WindowHeight=window.screen.height;
         var ErweimaHeight=document.getElementById("Erweima");
         var ErweikuangHeight=document.getElementById("Erweikuang");
-        if (WindowHeight < 1000){
+        var ErweikuangHeight=document.getElementById("main");
+        if (WindowHeight > 1000){
+            console.log(ErweikuangHeight.style);
             ErweimaHeight.style.cssText="zoom: 0.85;margin-top:5%";
             ErweikuangHeight.style.cssText="zoom: 0.85;margin-top:5%";
-        }else{
-            ErweimaHeight.style.cssText="zoom: 1;";
-            ErweikuangHeight.style.cssText="zoom: 1;";
+            ErweikuangHeight.style.cssText="height:600px";
         }
     },
   },
@@ -110,24 +110,29 @@ export default {
     #Top {
       background-size: cover;
     }
+
     #Erweima {
       top: 400px;
       left: 40px;
       position: absolute;
     }
 
+    #Erweima :first-child{
+      margin-left:35%;
+    }
+
     #Erweikuang {
       width: 200px;
       height: 50px;
-      top: 510px;
-      left:170px;
+      top: 550px;
+      left:8.7%;
       text-align: center;
       position: absolute;
     }
 
     #main{
         margin:0 auto;
-        height: 690px;
+        height: 685px;
         width: 1300px;
         font-family:"华文楷体";
         position: relative;

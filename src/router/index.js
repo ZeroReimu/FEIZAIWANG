@@ -37,6 +37,12 @@ export default new Router({
       component: () => import('../views/UserRegister.vue'),
       meta: { title: '注册' }
     },
+    {
+      path: '/Radar',
+      name: 'Radar',
+      component: () => import('../views/Radar.vue'),
+      meta: { title: '测试' }
+    },
   ],
   
 })

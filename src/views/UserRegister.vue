@@ -117,7 +117,7 @@ export default {
 
     #main{
         margin:0 auto;
-        height: 680px;
+        height: 690px;
         width: 1300px;
         font-family:"华文楷体";
         position: relative;
