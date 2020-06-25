@@ -43,6 +43,12 @@ export default new Router({
       component: () => import('../views/Radar.vue'),
       meta: { title: '测试' }
     },
+    {
+      path: '/Ball',
+      name: 'Ball',
+      component: () => import('../views/Ball.vue'),
+      meta: { title: '小球' }
+    },
   ],
   
 })

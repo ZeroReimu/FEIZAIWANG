@@ -87,8 +87,7 @@ export default {
         var ErweimaHeight=document.getElementById("Erweima");
         var ErweikuangHeight=document.getElementById("Erweikuang");
         var ErweikuangHeight=document.getElementById("main");
-        if (WindowHeight > 1000){
-            console.log(ErweikuangHeight.style);
+        if (WindowHeight < 1000){
             ErweimaHeight.style.cssText="zoom: 0.85;margin-top:5%";
             ErweikuangHeight.style.cssText="zoom: 0.85;margin-top:5%";
             ErweikuangHeight.style.cssText="height:600px";

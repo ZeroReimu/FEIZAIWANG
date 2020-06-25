@@ -10,16 +10,19 @@
                     </li>
                     <li class='One'><a href=''>动漫</a>
                         <ul>
-                            <li><a href=''>收录</a></li>
+                        <router-link to="/test" active-class="span">
+                            <li><span>收录</span></li>
+                        </router-link>
                         </ul>
                     </li>
                     <li class='One'><a href=''>创意</a>
                         <ul>
                             <router-link to="/Radar" active-class="span">
-                                <li><a href=''>雷达</a></li>
+                                <li><span>雷达</span></li>
                             </router-link>
-                            <li><a href=''>2.2</a></li>
-                            
+                            <router-link to="/Ball" active-class="span">
+                                <li><span>小球</span></li>
+                            </router-link>
                         </ul>
                     </li>
                     <li class='One'>
@@ -27,15 +30,15 @@
                             <span>图库</span>
                         </router-link>
                         <ul>
-                            <li><a href=''>3.1</a></li>
-                            <li><a href=''>3.2</a></li>
-                            <li><a href=''>3.3</a></li>
+                            <li><span>3.1</span></li>
+                            <li><span>3.2</span></li>
+                            <li><span>3.3</span></li>
                         </ul>
                     </li>
                     <li class='One'><a href=''>日记</a>
                         <ul>
-                            <li><a href=''>4.1</a></li>
-                            <li><a href=''>4.2</a></li>
+                            <li><span>4.1</span></li>
+                            <li><span>4.2</span></li>
                         </ul>
                     </li>
                     <li class='One'>

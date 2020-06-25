@@ -1,7 +1,10 @@
 <template>
   <div>
     <TopHeader :msg="PhotoMsg"></TopHeader>
-    <Swiper></Swiper>
+
+    <div id="test" class="thisbody">
+        <div class="radar"></div>
+    </div>
     <!-- <Footer></Footer> -->
     <Navigatio style="display:none"></Navigatio>
   </div>
@@ -11,31 +14,30 @@
 <script>
 import TopHeader from '@/components/TopHeader'
 import Navigatio from '@/components/Navigatio'
-import Footer from '@/components/Footer'
-import Swiper from '@/components/Swiper'
-import 'swiper/css/swiper.css'
 export default {
   name: 'ImageHouse',
   data(){
     return{
       PhotoMsg:{
-        TopImg:"http://cdn.acgproject.cn/banner-48.png",
-        TopNavImg:"http://cdn.acgproject.cn/banner-48.png",
-        Logo0:"http://cdn.acgproject.cn/logo-48.png",
+        TopImg:"http://cdn.acgproject.cn/banner-"+31+".png",
+        TopNavImg:"http://cdn.acgproject.cn/banner-31.png",
+        Logo0:"http://cdn.acgproject.cn/logo-31.png",
       }
     }
+  },
+  methods:{
+
+  },
+    mounted:function(){
+
   },
   components:{
     TopHeader,
     Navigatio,
-    Footer,
-    Swiper,
   }
 }
 </script>
 
 <style scoped>
-   #Navigatio{
-     display: none;
-   }
+
 </style>

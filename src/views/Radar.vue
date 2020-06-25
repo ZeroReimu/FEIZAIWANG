@@ -47,5 +47,8 @@ export default {
 
 <style scoped>
    @import "../assets/Css/Radar.css";
-
+   
+   #Navigatio{
+     display: none;
+   }
 </style>
