@@ -3,7 +3,7 @@
     <TopHeader :msg="PhotoMsg"></TopHeader>
     <Swiper></Swiper>
     <!-- <Footer></Footer> -->
-    <Navigatio style="display:none"></Navigatio>
+    <Navigatio></Navigatio>
   </div>
 
 </template>
@@ -21,7 +21,7 @@ export default {
       PhotoMsg:{
         TopImg:"http://cdn.acgproject.cn/banner-48.png",
         TopNavImg:"http://cdn.acgproject.cn/banner-48.png",
-        Logo0:"http://cdn.acgproject.cn/logo-48.png",
+        Logo:"http://cdn.acgproject.cn/logo-48.png",
       }
     }
   },

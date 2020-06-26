@@ -2,7 +2,7 @@
   <div>
     <TopHeader :msg="PhotoMsg"></TopHeader>
 
-    <div id="test" class="thisbody">
+    <div id="Rader" class="thisbody">
         <div class="radar"></div>
     </div>
     <!-- <Footer></Footer> -->
@@ -15,28 +15,26 @@
 import TopHeader from '@/components/TopHeader'
 import Navigatio from '@/components/Navigatio'
 export default {
-  name: 'ImageHouse',
+  name: 'Radar',
   data(){
     return{
       PhotoMsg:{
         TopImg:"http://cdn.acgproject.cn/banner-"+7+".png",
-        TopNavImg:"http://cdn.acgproject.cn/banner-41.png",
-        Logo0:"http://cdn.acgproject.cn/logo-41.png",
+        TopNavImg:"http://cdn.acgproject.cn/banner-7.png",
+        Logo:"http://cdn.acgproject.cn/logo-7.png",
       }
     }
   },
   methods:{
   //检测页面高度并调整
-    GetWindowHeight(){
-        var WindowHeight=window.screen.height;
-        var RadarHeight=document.getElementById("test");
-        if (WindowHeight < 1000){    
-            RadarHeight.setAttribute("class", "thisbodysmall");
-        }
+    RadarHeight(){
+        var Height=this.utils.AutoHeight();
+        var RadarHeight=document.getElementById("Rader");
+        RadarHeight.style.cssText="height:"+Height+"px;";
     },
   },
     mounted:function(){
-      this.GetWindowHeight();
+      this.RadarHeight();
   },
   components:{
     TopHeader,
@@ -47,8 +45,9 @@ export default {
 
 <style scoped>
    @import "../assets/Css/Radar.css";
-   
+
    #Navigatio{
      display: none;
    }
+
 </style>

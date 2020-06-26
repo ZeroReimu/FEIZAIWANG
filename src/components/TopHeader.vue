@@ -23,6 +23,9 @@
                             <router-link to="/Ball" active-class="span">
                                 <li><span>小球</span></li>
                             </router-link>
+                            <router-link to="/Lamp" active-class="span">
+                                <li><span>辉光钟</span></li>
+                            </router-link>
                         </ul>
                     </li>
                     <li class='One'>
@@ -176,4 +179,5 @@
     #Nav ul li{position:relative;float:left;width:100px;line-height:48px;text-align:center;}
     #Nav ul li ul{position:absolute;left:0px;top:48px;display:none;}
     #Nav ul li ul li{float:none;background-color:rgba(255,250,250,0.9);margin-top:0px;}
+    
 </style>

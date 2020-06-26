@@ -25,4 +25,11 @@ export default {
         link.type = 'text/css';
         head.appendChild(link);
     },
+
+    //返回页头下的DIV高度
+    AutoHeight(){
+        var WindowHeight=window.screen.height;
+        var DivHeight=WindowHeight-322;
+        return(DivHeight);
+    }
 } 

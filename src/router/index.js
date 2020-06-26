@@ -49,6 +49,12 @@ export default new Router({
       component: () => import('../views/Ball.vue'),
       meta: { title: '小球' }
     },
+    {
+      path: '/Lamp',
+      name: 'Lamp',
+      component: () => import('../views/Lamp.vue'),
+      meta: { title: '辉光管' }
+    },
   ],
   
 })
