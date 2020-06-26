@@ -86,11 +86,11 @@ export default {
         var WindowHeight=window.screen.height;
         var ErweimaHeight=document.getElementById("Erweima");
         var ErweikuangHeight=document.getElementById("Erweikuang");
-        var ErweikuangHeight=document.getElementById("main");
+        var LoginBody=document.getElementById("main");
         if (WindowHeight < 1000){
-            ErweimaHeight.style.cssText="zoom: 0.85;margin-top:5%";
-            ErweikuangHeight.style.cssText="zoom: 0.85;margin-top:5%";
-            ErweikuangHeight.style.cssText="height:600px";
+            ErweimaHeight.style.cssText="zoom: 0.85;margin-left:3%";
+            ErweikuangHeight.style.cssText="zoom: 0.85;margin-left:4%";
+            LoginBody.style.cssText="zoom: 0.77;height:600px";
         }
     },
   },

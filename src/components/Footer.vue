@@ -15,7 +15,20 @@ export default {
   name: "Footer",
   data() {
     return {}
-  }
+  }, 
+  methods:{
+    //检测页面高度并调整
+    GetWindowHeight(){
+        var WindowHeight=window.screen.height;
+        var a=document.getElementById("Footer");
+        if (WindowHeight < 1000){
+            a.style.cssText="zoom: 0.95;";
+        }
+    },
+  },
+  mounted:function(){
+      this.GetWindowHeight();
+  },
 };
 </script>
 

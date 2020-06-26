@@ -62,7 +62,7 @@
         
     </div>
 
-    <main style="position:absolute;top:330px;">
+    <main id="drink" style="position:absolute;top:330px;">
         <div class="title">吸</div>
         <div class="gaizi"></div>
         <div class="beizi">
@@ -100,6 +100,19 @@ export default {
         Logo:"http://cdn.acgproject.cn/logo-5.png",
       }
     }
+  },
+  methods:{
+    //检测页面高度并调整
+    GetWindowHeight(){
+        var WindowHeight=window.screen.height;
+        var RegisterBody=document.getElementById("main");
+        if (WindowHeight < 1000){
+            RegisterBody.style.cssText="zoom: 0.77;height:625px;margin-top:-20px;";
+        }
+    },
+  },
+  mounted:function(){
+      this.GetWindowHeight();
   },
   components:{
     TopHeader,

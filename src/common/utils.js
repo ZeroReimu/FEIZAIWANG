@@ -28,8 +28,8 @@ export default {
 
     //返回页头下的DIV高度
     AutoHeight(){
-        var WindowHeight=window.screen.height;
-        var DivHeight=WindowHeight-322;
+        var WindowHeight=window.innerHeight;
+        var DivHeight=WindowHeight-179;
         return(DivHeight);
     }
 } 
