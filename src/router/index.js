@@ -55,6 +55,12 @@ export default new Router({
       component: () => import('../views/Lamp.vue'),
       meta: { title: '辉光管' }
     },
+    {
+      path: '/CodeRain',
+      name: 'CodeRain',
+      component: () => import('../views/CodeRain.vue'),
+      meta: { title: '代码雨' }
+    },
   ],
   
 })

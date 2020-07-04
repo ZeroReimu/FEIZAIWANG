@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TopHeader :msg="HomeMsg"></TopHeader>
+    <TopHeader :msg="PhotoMsg"></TopHeader>
     <Animation></Animation>
     <!-- <div class="Coke">
       <img v-bind:src="CoKe" style="width:100%"/>
@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       CoKe: "http://cdn.acgproject.cn/CoKe.gif",
-      HomeMsg: {
+      PhotoMsg: {
         TopImg: "http://cdn.acgproject.cn/banner-48.png",
         TopNavImg:"http://cdn.acgproject.cn/banner-48.png",
         Logo: "http://cdn.acgproject.cn/logo-48.png"

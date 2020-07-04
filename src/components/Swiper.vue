@@ -5,8 +5,8 @@
         <img :src="banner">
       </div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
     <div class="swiper-pagination"></div>
     <div class="swiper-scrollbar"></div>
   </div>
@@ -27,6 +27,18 @@
             "http://cdn.acgproject.cn/img-8_gaitubao_2567x1492.jpg",
             "http://cdn.acgproject.cn/img-9_gaitubao_2567x1492.jpg",
             "http://cdn.acgproject.cn/img-10_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-12_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-13_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-14_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-15_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-16_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-17_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-20_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-21_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-22_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-25_gaitubao_2567x1492.jpg",
+            "http://cdn.acgproject.cn/img-26_gaitubao_2567x1492.jpg",
+            
         ],
         swiperOption: {
           swiperContainer:'.swiper-container',//默认容器类型
@@ -72,13 +84,12 @@
 <style scoped>
   .swiper-wrapper{
    transition-timing-function:ease-in;
-   
   }
   /* 容器样式 */
   .swiper-container {
     position:absolute;
     z-index: 0;
-    margin-top:-230px;
+    margin-top:-145px;
     width: 100%;
     /* height: 105%; */
   }  
@@ -91,15 +102,17 @@
 
   /* 分页器样式 */
   .swiper-container{
-    --swiper-navigation-color: #c7e4cd;/* 按钮颜色 */
-    --swiper-navigation-size: 60px;/* 设置按钮大小 */
+    --swiper-navigation-color: #c7e4cd;
+    --swiper-navigation-size: 60px;
   }
   .swiper-pagination{
+    zoom:1.3;
     --swiper-pagination-color: #5acaec;/* 分页器颜色 */
-    top:120px;
+    top:30px;
   }
   .swiper-scrollbar{
-    margin-bottom:7%;
+    zoom:1.3;
+    margin-bottom:12%;
   }
   .swiper-pagination-bullet{
     width: 12px;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TopHeader :msg="UserRegisterMsg"></TopHeader>
+    <TopHeader :msg="PhotoMsg"></TopHeader>
 
     <div id="main">
 
@@ -94,7 +94,7 @@ export default {
   name: 'UserRegister',
   data(){
     return{
-      UserRegisterMsg:{
+      PhotoMsg:{
         TopImg:"http://cdn.acgproject.cn/banner-5.png",
         TopNavImg:"http://cdn.acgproject.cn/banner-5.png",
         Logo:"http://cdn.acgproject.cn/logo-5.png",

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TopHeader :msg="UserLoginMsg"></TopHeader>
+    <TopHeader :msg="PhotoMsg"></TopHeader>
 
     <div id="main">
 
@@ -73,7 +73,7 @@ export default {
     return{
       QRcode:"http://cdn.acgproject.cn/QRcode.png",
       twothree:"http://cdn.acgproject.cn/logo2233.png",
-      UserLoginMsg:{
+      PhotoMsg:{
         TopImg:"http://cdn.acgproject.cn/banner-8.png",
         TopNavImg:"http://cdn.acgproject.cn/banner-8.png",
         Logo:"http://cdn.acgproject.cn/logo-8.png",

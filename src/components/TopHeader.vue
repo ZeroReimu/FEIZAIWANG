@@ -15,7 +15,10 @@
                         </router-link>
                         </ul>
                     </li>
-                    <li class='One'><a href=''>创意</a>
+                    <li class='One'>
+                        <router-link to="/CodeRain" active-class="span">
+                            <span>创意</span>
+                        </router-link>
                         <ul>
                             <router-link to="/Radar" active-class="span">
                                 <li><span>雷达</span></li>
