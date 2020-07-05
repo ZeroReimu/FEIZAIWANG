@@ -36,7 +36,9 @@
                             <span>图库</span>
                         </router-link>
                         <ul>
-                            <li><span>3.1</span></li>
+                            <router-link to="/CanvasBackground" active-class="span">
+                                <li><span>背景</span></li>
+                            </router-link>
                             <li><span>3.2</span></li>
                             <li><span>3.3</span></li>
                         </ul>

@@ -106,12 +106,12 @@
     --swiper-navigation-size: 60px;
   }
   .swiper-pagination{
-    zoom:1.3;
+    zoom:1.4;
     --swiper-pagination-color: #5acaec;/* 分页器颜色 */
     top:30px;
   }
   .swiper-scrollbar{
-    zoom:1.3;
+    zoom:1.4;
     margin-bottom:12%;
   }
   .swiper-pagination-bullet{

@@ -26,6 +26,12 @@ export default new Router({
       meta: { title: '图库' }
     },
     {
+      path: '/CanvasBackground',
+      name: 'CanvasBackground',
+      component: () => import('../views/CanvasBackground.vue'),
+      meta: { title: '背景' }
+    },
+    {
       path: '/UserLogin',
       name: 'UserLogin',
       component: () => import('../views/UserLogin.vue'),

@@ -1,7 +1,9 @@
 <template>
   <div>
     <TopHeader :msg="PhotoMsg"></TopHeader>
-    <canvas id=q></canvas>
+    <div id="CodeRainBody">
+      <canvas id=q></canvas>
+    </div>
     <!-- <Footer></Footer> -->
     <Navigatio></Navigatio>
   </div>
@@ -25,10 +27,10 @@ export default {
   methods:{
     //检测页面高度并调整
     CodeRainHeight(){
-        var WindowHeight=window.innerHeight;
-        var Height=WindowHeight-49;
-        var CodeRainHeight=document.getElementById("q");
-        CodeRainHeight.style.cssText="height:"+Height+"px;";
+        var Height=this.utils.AutoHeight();
+        var Height2=Height+131;
+        var BallHeight=document.getElementById("CodeRainBody");
+        BallHeight.style.cssText="height:"+Height2+"px;";
     },
     CodeRain(){
       const s = window.screen;
@@ -66,10 +68,11 @@ export default {
 
 <style scoped>
   #q{
-    width: 100%;  
+    width: 100%;
+    height: 100%;
   }
   #Top{
-     height:0;
+     height:48px;
   }
   #Navigatio{
      display: none;
