@@ -3,6 +3,7 @@
     <TopHeader :msg="PhotoMsg"></TopHeader>
     <div id="Background">
       <Background></Background>
+      <div class="instructions">我从未惧怕孤独，直到我遇见了你</div>
     </div>
     <!-- <Footer></Footer> -->
     <Navigatio></Navigatio>
@@ -20,7 +21,7 @@ export default {
     return {
       PhotoMsg: {
         //TopImg:"http://cdn.acgproject.cn/banner-48.png",
-        TopNavImg: "http://cdn.acgproject.cn/banner-48.png"
+        TopNavImg: "http://cdn.acgproject.cn/banner-9.png"
         //Logo:"http://cdn.acgproject.cn/logo-48.png",
       }
     };
@@ -55,5 +56,15 @@ export default {
 }
 #Background{
     background:black;
+}
+.instructions {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  letter-spacing: 2px;
+  pointer-events: none;
 }
 </style>

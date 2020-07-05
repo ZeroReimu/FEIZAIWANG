@@ -1,7 +1,5 @@
 <template>
-  
     <canvas></canvas>
-
 </template>
 
 <script>
@@ -174,7 +172,7 @@ export default {
   },
   mounted: function() {
     this.BackgroundFunction();
-    this.GetWindowHeight();
+    //this.GetWindowHeight();
   }
 };
 </script>
