@@ -45,7 +45,9 @@
                     </li>
                     <li class='One'><a href=''>日记</a>
                         <ul>
-                            <li><span>4.1</span></li>
+                            <router-link to="/NoteBook" active-class="span">
+                                <li><span>便签本</span></li>
+                            </router-link>
                             <li><span>4.2</span></li>
                         </ul>
                     </li>

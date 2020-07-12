@@ -9,7 +9,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HomePage',
+      name: 'Home-Page',
       component: () => import('../views/HomePage.vue'),
       meta: { title: '首页' }
     },
@@ -66,6 +66,12 @@ export default new Router({
       name: 'CodeRain',
       component: () => import('../views/CodeRain.vue'),
       meta: { title: '代码雨' }
+    },
+    {
+      path: '/NoteBook',
+      name: 'NoteBook',
+      component: () => import('../views/NoteBook.vue'),
+      meta: { title: '笔记本' }
     },
   ],
   

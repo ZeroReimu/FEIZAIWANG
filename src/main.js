@@ -4,9 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Utils from './common/utils.js';
-
+import APlayer from '@moefe/vue-aplayer';//音乐组件
 import VueAwesomeSwiper from 'vue-awesome-swiper'//swiper组件
 
+Vue.use(APlayer);
 
 Vue.use(VueAwesomeSwiper)
 
