@@ -3,18 +3,27 @@
         <div id='Nav' >
             <div style='margin-left:180px'>
                 <ul>
+
                     <li class='One'>
                         <router-link to="/HomePage" active-class="span">
                             <span>主站</span>
                         </router-link>
                     </li>
-                    <li class='One'><a href=''>动漫</a>
-                        <ul>
-                        <router-link to="/test" active-class="span">
-                            <li><span>收录</span></li>
+
+                    <li class='One'>
+                        <router-link to="/" active-class="span">
+                            <span>动漫</span>
                         </router-link>
+                        <ul>
+                            <router-link to="/JOJO" active-class="span">
+                                <li><span>JOJO</span></li>
+                            </router-link>
+                            <router-link to="/" active-class="span">
+                                <li><span>收录</span></li>
+                            </router-link>
                         </ul>
                     </li>
+
                     <li class='One'>
                         <router-link to="/CodeRain" active-class="span">
                             <span>创意</span>
@@ -31,6 +40,7 @@
                             </router-link>
                         </ul>
                     </li>
+
                     <li class='One'>
                         <router-link to="/ImageHouse" active-class="span">
                             <span>图库</span>
@@ -39,18 +49,27 @@
                             <router-link to="/CanvasBackground" active-class="span">
                                 <li><span>背景</span></li>
                             </router-link>
-                            <li><span>3.2</span></li>
-                            <li><span>3.3</span></li>
-                        </ul>
-                    </li>
-                    <li class='One'><a href=''>日记</a>
-                        <ul>
-                            <router-link to="/NoteBook" active-class="span">
-                                <li><span>便签本</span></li>
+                            <router-link to="/" active-class="span">
+                                <li><span>3.1</span></li>
                             </router-link>
-                            <li><span>4.2</span></li>
                         </ul>
                     </li>
+
+
+                    <li class='One'>
+                        <router-link to="/" active-class="span">
+                            <span>日记</span>
+                        </router-link>
+                        <ul>
+                            <router-link to="/" active-class="span">
+                                <li><span>4.1</span></li>
+                            </router-link>
+                            <router-link to="/" active-class="span">
+                                <li><span>4.2</span></li>
+                            </router-link>
+                        </ul>
+                    </li>
+
                     <li class='One'>
                         <router-link to="/UserLogin" active-class="span">
                             <span>登陆</span>
@@ -61,11 +80,15 @@
                             </router-link>
                         </ul>
                     </li>
+
                 </ul>
             </div>
+
             <div id='kuang' v-bind:style="{'backgroundImage':'url(' +msg.TopNavImg+ ')'}"></div>
         </div>
+
         <a href='index.html'><img id='Logo' v-bind:src="msg.Logo"></a>
+
     </div>
     
 </template>

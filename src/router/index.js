@@ -68,10 +68,10 @@ export default new Router({
       meta: { title: '代码雨' }
     },
     {
-      path: '/NoteBook',
-      name: 'NoteBook',
-      component: () => import('../views/NoteBook.vue'),
-      meta: { title: '笔记本' }
+      path: '/JOJO',
+      name: 'JOJO',
+      component: () => import('../views/JOJO.vue'),
+      meta: { title: 'JOJO' }
     },
   ],
   
