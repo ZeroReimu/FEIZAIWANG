@@ -253,7 +253,7 @@ to {margin-top:0px;}
   width: 100px;
   line-height: 48px;
   text-align: center;
-  animation: down 0.5s ease;
+  animation: down 0.2s ease;
 }
 #Nav ul li ul {
   position: absolute;
