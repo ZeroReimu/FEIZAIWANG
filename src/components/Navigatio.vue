@@ -2,15 +2,15 @@
     <div id='Navigatio'>
         <ul>
             <li class='Two'><router-link to="/HomePage" active-class="span">主站</router-link></li>
-            <li class='Two'><a href=''>动画</a></li>
-            <li class='Two'><a href=''>音乐</a></li>
-            <li class='Two'><a href=''>游戏</a></li>
-            <li class='Two'><a href=''>鬼畜</a></li>
-            <li class='Two'><a href=''>专业</a></li>
-            <li class='Two'><a href=''>东方</a></li>
-            <li class='Two'><a href=''>课程</a></li>
-            <li class='Two'><a href=''>谨记</a></li>
-            <li class='Two'><a href=''>心得</a></li>
+            <li class='Two'><a href='http://www.bilibili.com'>B站</a></li>
+            <li class='Two'><a href='http://www.gogle.com'>谷歌</a></li>
+            <li class='Two'><a href='http://www.baidu.com'>百度</a></li>
+            <li class='Two'><a href='http://www.gmail.com'>邮箱</a></li>
+            <li class='Two'><a href='http://www.youtube.com/'>油管</a></li>
+            <li class='Two'><a href='http://live.bilibili.com/p/eden/area-tags?parentAreaId=1&areaId=199'>直播</a></li>
+            <li class='Two'><a href='http://github.com/'>GIT</a></li>
+            <li class='Two'><a href='http://console.cloud.tencent.com/cvm/instance/index?rid='>实例</a></li>
+            <li class='Two'><router-link to="/UserLogin" active-class="span">登录</router-link></li>
         </ul>
     </div>
 </template>
@@ -64,6 +64,7 @@ export default {
         background-color: #FFFFFF;
         position: fixed;
         z-index: 5;
+        
     }
     #Navigatio li{
         font-size:15px;
@@ -72,5 +73,11 @@ export default {
         line-height:40px;
         text-align:center;
         margin-top:10px;
+        transition: all ease 0.3s;
     }
+    #Navigatio li:hover {
+      background: rgba(245, 245, 245, 0.6);
+      box-shadow: 0px 1px 4px #a5c8fd;
+    }
+    
 </style>

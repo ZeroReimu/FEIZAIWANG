@@ -263,7 +263,7 @@ to {margin-top:0px;}
 }
 #Nav ul li ul li {
   float: none;
-  background-color: rgba(255, 250, 250, 0.9);
+  background-color: rgba(255, 250, 250, 0.7);
   margin-top: 0px;
 }
 </style>
