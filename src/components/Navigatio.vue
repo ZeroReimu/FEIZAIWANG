@@ -3,9 +3,9 @@
         <ul>
             <li class='Two'><router-link to="/HomePage" active-class="span">主站</router-link></li>
             <li class='Two'><a href='http://www.bilibili.com'>B站</a></li>
-            <li class='Two'><a href='http://www.gogle.com'>谷歌</a></li>
+            <li class='Two'><a href='http://www.pcrdfans.com/battle'>公主</a></li>
             <li class='Two'><a href='http://www.baidu.com'>百度</a></li>
-            <li class='Two'><a href='http://www.gmail.com'>邮箱</a></li>
+            <li class='Two'><a href='http://www.mail.qq.com'>邮箱</a></li>
             <li class='Two'><a href='http://www.youtube.com/'>油管</a></li>
             <li class='Two'><a href='http://live.bilibili.com/p/eden/area-tags?parentAreaId=1&areaId=199'>直播</a></li>
             <li class='Two'><a href='http://github.com/'>GIT</a></li>
