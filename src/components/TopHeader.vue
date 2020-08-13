@@ -19,7 +19,7 @@
                   <span>JOJO</span>
                 </li>
               </router-link>
-              <router-link to="/" active-class="span">
+              <router-link to="/Anime" active-class="span">
                 <li>
                   <span>收录</span>
                 </li>

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -72,6 +73,12 @@ export default new Router({
       name: 'JOJO',
       component: () => import('../views/JOJO.vue'),
       meta: { title: 'JOJO' }
+    },
+    {
+      path: '/Anime',
+      name: 'Anime',
+      component: () => import('../views/Anime.vue'),
+      meta: { title: '收录' }
     },
   ],
   

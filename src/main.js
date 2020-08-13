@@ -6,9 +6,11 @@ import router from './router'
 import Utils from './common/utils.js';
 import APlayer from '@moefe/vue-aplayer';//音乐组件
 import VueAwesomeSwiper from 'vue-awesome-swiper'//swiper组件
+import ElementUI from 'element-ui';//饿了吗组件
+import 'element-ui/lib/theme-chalk/index.css';//饿了吗css
 
 Vue.use(APlayer);
-
+Vue.use(ElementUI);
 Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false;
@@ -18,6 +20,7 @@ Vue.prototype.utils=Utils;
 new Vue({
   el: '#app',
   router,
+  render: h => h(App),
   components: { App },
   template: '<App/>'
 })
