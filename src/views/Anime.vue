@@ -152,10 +152,6 @@ export default {
       tableData: [
         {
           year: null,
-          name: null,
-          user: null,
-          tag: null,
-          score: null,
         },
       ],
     };
