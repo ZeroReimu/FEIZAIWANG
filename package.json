@@ -1,6 +1,7 @@
 {
   "name": "feizhaiwang",
   "version": "1.0.0",
+<<<<<<< HEAD
   "private": true,
   "description": "A Vue.js project",
   "author": "ZeroReimu <2508957142@qq.com>",
@@ -8,11 +9,23 @@
     "build": "node build/build.js",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev"
+=======
+  "description": "A Vue.js project",
+  "author": "ZeroReimu <2508957142@qq.com>",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "build": "node build/build.js"
+>>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
   },
   "dependencies": {
     "@moefe/vue-aplayer": "^2.0.0-beta.5",
     "babel-plugin-transform-remove-strict-mode": "0.0.2",
+<<<<<<< HEAD
     "element-ui": "^2.13.2",
+=======
+>>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
     "hls.js": "^0.14.0",
     "swiper": "^5.4.1",
     "vue": "^2.5.2",
@@ -22,7 +35,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+<<<<<<< HEAD
     "axios": "^0.18.0",
+=======
+>>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
@@ -50,7 +66,10 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+<<<<<<< HEAD
     "vue-cli-plugin-axios": "0.0.4",
+=======
+>>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
@@ -59,14 +78,25 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
+<<<<<<< HEAD
+=======
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+>>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
   "browserslist": [
     "> 1%",
     "last 5 versions",
     "Android >= 4.0",
     "not ie <= 8"
+<<<<<<< HEAD
   ],
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   }
+=======
+  ]
+>>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
 }
