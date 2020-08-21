@@ -1,10 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
 Vue.use(Router)
 
 export default new Router({
@@ -77,15 +73,27 @@ export default new Router({
       component: () => import('../views/JOJO.vue'),
       meta: { title: 'JOJO' }
     },
-<<<<<<< HEAD
     {
       path: '/Anime',
       name: 'Anime',
       component: () => import('../views/Anime.vue'),
-      meta: { title: '收录' }
+      meta: { title: '收录' },
+      redirect:"/AnimeList",
+      children:[
+        {
+          path:'/AnimeList',
+          name:'AnimeList',
+          component: () => import('../components/AnimeList.vue'),
+          meta: { title: '番剧列表' },
+        },
+        {
+          path:'/AnimeAdd',
+          name:'AnimeAdd',
+          component: () => import('../components/AnimeAdd.vue'),
+          meta: { title: '番剧添加' },
+        }
+      ]
     },
-=======
->>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
   ],
   
 })

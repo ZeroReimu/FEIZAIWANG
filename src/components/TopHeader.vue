@@ -19,11 +19,7 @@
                   <span>JOJO</span>
                 </li>
               </router-link>
-<<<<<<< HEAD
               <router-link to="/Anime" active-class="span">
-=======
-              <router-link to="/" active-class="span">
->>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
                 <li>
                   <span>收录</span>
                 </li>
@@ -257,11 +253,7 @@ to {margin-top:0px;}
   width: 100px;
   line-height: 48px;
   text-align: center;
-<<<<<<< HEAD
   animation: down 0.2s ease;
-=======
-  animation: down 0.5s ease;
->>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
 }
 #Nav ul li ul {
   position: absolute;
@@ -271,11 +263,7 @@ to {margin-top:0px;}
 }
 #Nav ul li ul li {
   float: none;
-<<<<<<< HEAD
   background-color: rgba(255, 250, 250, 0.7);
-=======
-  background-color: rgba(255, 250, 250, 0.9);
->>>>>>> 689f1c6ff036864fc03a6ebad9a5efd40fa8b4ff
   margin-top: 0px;
 }
 </style>
