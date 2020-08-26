@@ -11,6 +11,7 @@
     </div>
     <el-table
       v-loading="loading"
+      element-loading-text="在努力了 o(*≧▽≦)ツ"
       ref="filterTable"
       :data="tableData"
       height="516"
@@ -124,8 +125,8 @@
 
       <el-table-column fixed="right" label="操作" width="100">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
-          <el-button type="text" size="small">编辑</el-button>
+          <el-button @click="edit(scope.row),look = true" type="text" size="small">查看</el-button>
+          <el-button @click="edit(scope.row),dialogFormVisible = true" type="text" size="small" >编辑</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -136,10 +137,104 @@
       style="margin:30px 0;"
       @current-change="page"
     ></el-pagination>
+
+
+    <el-dialog title="详细信息" :visible.sync="look" width="30%">
+      <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
+        <el-form-item label="番剧编号" prop="id" style="display:none">
+            <el-input v-model="ruleForm.id" :disabled="true"></el-input>
+        </el-form-item>
+        <el-form-item label="番剧名称" prop="name">
+            <el-input v-model="ruleForm.name" :disabled="true"></el-input>
+        </el-form-item>
+        <el-form-item label="主要人物" prop="lead">
+            <el-input v-model="ruleForm.lead" :disabled="true"></el-input>
+        </el-form-item>
+        <el-form-item label="活动时间" required>
+            <el-date-picker prop="date" type="month" :disabled="true" placeholder="选择日期" v-model="ruleForm.date" style="width: 100%" format="yyyy 年 MM 月" value-format="yyyy年MM月"></el-date-picker>
+        </el-form-item>
+        <el-form-item label="番剧类型" prop="tag">
+          <el-radio-group v-model="ruleForm.tag" size="small">
+            <el-radio-button label="日常"></el-radio-button>
+            <el-radio-button label="后宫"></el-radio-button>
+            <el-radio-button label="战斗"></el-radio-button>
+            <el-radio-button label="欢乐"></el-radio-button>
+            <el-radio-button label="爱情"></el-radio-button>
+            <el-radio-button label="电影"></el-radio-button>
+            <el-radio-button label="神作"></el-radio-button>
+          </el-radio-group>
+        </el-form-item>
+        <el-form-item label="个人评价" prop="score">
+          <el-radio-group v-model="ruleForm.score">
+            <el-radio label="5">超赞</el-radio>
+            <el-radio label="4">推荐</el-radio>
+            <el-radio label="3">普通</el-radio>
+            <el-radio label="2">差评</el-radio>
+            <el-radio label="1">烂作</el-radio>
+          </el-radio-group>
+        </el-form-item>
+        <!-- <el-form-item label="简单介绍" prop="desc">
+          <el-input type="textarea" rows="3" v-model="ruleForm.desc"></el-input>
+        </el-form-item> -->
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="look = false">确 定</el-button>
+      </span>
+    </el-dialog>
+
+
+    <el-dialog title="设定修正" :visible.sync="dialogFormVisible" boolean="true" style="margin:0 auto;width:70%">
+      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" >
+        <el-form-item label="番剧编号" prop="id" style="display:none">
+            <el-input v-model="ruleForm.id"></el-input>
+        </el-form-item>
+        <el-form-item label="番剧名称" prop="name">
+            <el-input v-model="ruleForm.name"></el-input>
+        </el-form-item>
+        <el-form-item label="主要人物" prop="lead">
+            <el-input v-model="ruleForm.lead"></el-input>
+        </el-form-item>
+        <el-form-item label="活动时间" required>
+            <el-date-picker prop="date" type="month" placeholder="选择日期" v-model="ruleForm.date" style="width: 100%" format="yyyy 年 MM 月" value-format="yyyy年MM月"></el-date-picker>
+        </el-form-item>
+        <el-form-item label="番剧类型" prop="tag">
+          <el-radio-group v-model="ruleForm.tag" size="medium">
+            <el-radio-button label="日常"></el-radio-button>
+            <el-radio-button label="后宫"></el-radio-button>
+            <el-radio-button label="战斗"></el-radio-button>
+            <el-radio-button label="欢乐"></el-radio-button>
+            <el-radio-button label="爱情"></el-radio-button>
+            <el-radio-button label="电影"></el-radio-button>
+            <el-radio-button label="神作"></el-radio-button>
+          </el-radio-group>
+        </el-form-item>
+        <el-form-item label="个人评价" prop="score">
+          <el-radio-group v-model="ruleForm.score">
+            <el-radio label="5">超赞</el-radio>
+            <el-radio label="4">推荐</el-radio>
+            <el-radio label="3">普通</el-radio>
+            <el-radio label="2">差评</el-radio>
+            <el-radio label="1">烂作</el-radio>
+          </el-radio-group>
+        </el-form-item>
+        <el-form-item label="简单介绍" prop="desc">
+          <el-input type="textarea" rows="3" v-model="ruleForm.desc"></el-input>
+        </el-form-item>
+      </el-form>
+
+      <div slot="footer" class="dialog-footer">
+        <el-button type="danger" @click="deleteAnime(),dialogFormVisible = false">删 除</el-button>
+        <el-button @click="dialogFormVisible = false">取 消</el-button>
+        <el-button type="primary" @click="submitForm('ruleForm'),dialogFormVisible = false">确 定</el-button>
+      </div>
+    </el-dialog>
+
+
+
   </div>
 </template>
 
-<style>
+<style scope>
   body {
     margin: 0;
   }
@@ -147,6 +242,7 @@
 
 <script>
 export default {
+  inject:['reload'],      
   name: "AnimeList",
   data() {
     return {
@@ -157,6 +253,30 @@ export default {
         },
       ],
       loading: true,
+      dialogFormVisible: false,
+      look: false,
+      ruleForm: {
+        id:'',
+        name: '',//书名
+      },
+      formLabelWidth: '120px',
+      rules: {
+        name: [
+          { required: true, message: '请输入番剧名称', trigger: 'blur' },
+        ],
+        lead: [
+          { required: true, message: '请输入主人公名称', trigger: 'blur' },
+        ],
+        date: [
+          { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
+        ],
+        tag: [
+          { required: true, message: '请至少选择一个类型', trigger: 'change' }
+        ],
+        score: [
+          { required: true, message: '请选择评价', trigger: 'change' }
+        ],
+      } 
     };
   },
   created() {
@@ -164,14 +284,43 @@ export default {
     axios
       .get("http://localhost:8181/anime/findAll/1/999")
       .then(function (resp) {
-        console.log(resp.data);
+        //console.log(resp.data);
         _this.tableData = resp.data.content;
         _this.total = resp.data.totalElements;
         _this.loading = false;
       });
   },
   methods: {
-    page(currentPage) {
+    submitForm(formName) {//修改数据并保存
+      const _this = this
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          axios.put('http://localhost:8181/anime/update',this.ruleForm).then(function(resp){
+            if(resp.data == 'success'){
+             
+              _this.$message({ message: '修改成功 ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
+              _this.reload()
+            } else {
+              _this.$message({ message: '等一下，有什么不对劲啊 w(ﾟДﾟ)w', type: 'warning' });
+            }
+          })
+        }
+      });
+    },
+    edit(row){//模态框展示数据
+      const _this = this
+      axios.get('http://localhost:8181/anime/findById/'+row.id).then(function(resp){
+        _this.ruleForm = resp.data
+      })
+    },
+    deleteAnime(){//删除数据
+      const _this = this
+      axios.delete('http://localhost:8181/anime/deleteById/'+_this.ruleForm.id).then(function(resp){
+        _this.$message({ message: '删除成功 ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
+        _this.reload()
+      })
+    },
+    page(currentPage) {//页数
       const _this = this;
       axios
         .get("http://localhost:8181/anime/findAll/" + currentPage + "/8")

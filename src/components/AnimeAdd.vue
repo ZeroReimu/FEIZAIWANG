@@ -114,8 +114,8 @@ export default {
 };
 </script>
 
-<style>
-.el-form-item {
+<style scope>
+.demo-ruleForm>.el-form-item {
     margin-top: 35px;
     margin-left: -50px;
 }

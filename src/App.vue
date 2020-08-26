@@ -4,7 +4,7 @@
     <div id="music" style="top:200px"><aplayer :audio="audio" :lrcType="0" 
      style="position:fixed;top:178px;z-index:999"/></div>
      
-   <router-view/>
+   <router-view v-if="isRouterAlive"></router-view>
    
   </div>
 </template>
@@ -12,9 +12,15 @@
 <script>
 
 export default {
+  name: 'APP',
+  provide(){//父组件中通过provide来提供变量，在子组件中通过inject来注入变量。 
+    return{
+      reload: this.reload
+    }
+  },
   data() {
     return {
-      name: 'APP',
+      isRouterAlive: true,  //控制视图是否显示的变量
 
       //音乐播放器数据
       audio: [
@@ -85,8 +91,17 @@ export default {
     };
   },
 
-
+  methods: {//组件刷新
+    reload () {
+        this.isRouterAlive = false;            //先关闭，
+        this.$nextTick(function () {
+            this.isRouterAlive = true;         //再打开
+        }) 
+    }
+  },
+  
   created () {
+    
       //Live2D导入
       setTimeout(() => {
           window.L2Dwidget.init({
@@ -94,15 +109,16 @@ export default {
           pluginJsPath: 'lib/',
           pluginModelPath: 'Live2D',
           tagMode: true,
-          debug: true,
+          debug: false,
           model: { scale: 1.3,jsonPath: '../static/Live2D/niepudun/model.json' },
           display: { position: 'left', width: 320, height:390 ,hOffset: -20,vOffset: 0},
           mobile: { show: true },
           log: true
           })
       }, 1000)
+      //console.log = function() {}
   },
-
+  
 }
 
 </script>
