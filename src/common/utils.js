@@ -13,7 +13,7 @@ export default {
         //console.log(Logohref);
     },
 
-    //重新加载css
+    //重载css
     addCss(path){
         if(!path || path.length === 0){
             throw new Error('argument "path" is required !');
@@ -29,7 +29,7 @@ export default {
     //返回页头下的DIV高度
     AutoHeight(){
         var WindowHeight=window.innerHeight;
-        var DivHeight=WindowHeight-179;
+        var DivHeight=WindowHeight-179;//179
         return(DivHeight);
     }
 } 

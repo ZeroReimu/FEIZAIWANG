@@ -126,7 +126,7 @@
       <el-table-column fixed="right" label="操作" width="100">
         <template slot-scope="scope">
           <el-button @click="edit(scope.row),look = true" type="text" size="small">查看</el-button>
-          <el-button @click="edit(scope.row),dialogFormVisible = true" type="text" size="small" >编辑</el-button>
+          <el-button @click="edit(scope.row),dialogFormVisible = false,verify=true" type="text" size="small" >编辑</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -142,16 +142,16 @@
     <el-dialog title="详细信息" :visible.sync="look" width="30%">
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
         <el-form-item label="番剧编号" prop="id" style="display:none">
-            <el-input v-model="ruleForm.id" :disabled="true"></el-input>
+            <el-input v-model="ruleForm.id" :disabled="true" size="small"></el-input>
         </el-form-item>
         <el-form-item label="番剧名称" prop="name">
-            <el-input v-model="ruleForm.name" :disabled="true"></el-input>
+            <el-input v-model="ruleForm.name" :disabled="true" size="small"></el-input>
         </el-form-item>
         <el-form-item label="主要人物" prop="lead">
-            <el-input v-model="ruleForm.lead" :disabled="true"></el-input>
+            <el-input v-model="ruleForm.lead" :disabled="true" size="small"></el-input>
         </el-form-item>
         <el-form-item label="活动时间" required>
-            <el-date-picker prop="date" type="month" :disabled="true" placeholder="选择日期" v-model="ruleForm.date" style="width: 100%" format="yyyy 年 MM 月" value-format="yyyy年MM月"></el-date-picker>
+            <el-date-picker prop="date" type="month" :disabled="true" placeholder="选择日期" v-model="ruleForm.date" style="width: 100%" format="yyyy 年 MM 月" value-format="yyyy年MM月" size="small"></el-date-picker>
         </el-form-item>
         <el-form-item label="番剧类型" prop="tag">
           <el-radio-group v-model="ruleForm.tag" size="small">
@@ -173,15 +173,18 @@
             <el-radio label="1">烂作</el-radio>
           </el-radio-group>
         </el-form-item>
-        <!-- <el-form-item label="简单介绍" prop="desc">
-          <el-input type="textarea" rows="3" v-model="ruleForm.desc"></el-input>
-        </el-form-item> -->
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="look = false">确 定</el-button>
       </span>
     </el-dialog>
 
+    <el-dialog title="权限不足" :visible.sync="verify" width="30%">
+      <el-input v-model="VerifyNumber" placeholder="请输入密码以进行编辑" style="width:70%"></el-input>
+      <span slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="test()">验证</el-button>
+      </span>
+    </el-dialog>
 
     <el-dialog title="设定修正" :visible.sync="dialogFormVisible" boolean="true" style="margin:0 auto;width:70%">
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" >
@@ -246,6 +249,7 @@ export default {
   name: "AnimeList",
   data() {
     return {
+      VerifyNumber:'',
       total: null,
       tableData: [
         {
@@ -255,6 +259,7 @@ export default {
       loading: true,
       dialogFormVisible: false,
       look: false,
+      verify: false,
       ruleForm: {
         id:'',
         name: '',//书名
@@ -291,6 +296,16 @@ export default {
       });
   },
   methods: {
+    test(){
+      if(this.VerifyNumber=='bllm'){
+        this.verify = false;
+        this.dialogFormVisible=true;
+        this.$message.success('信息核实成功');
+      }else{
+        this.$message.error('审核未通过');
+        this.verify = true;
+      }
+    },
     submitForm(formName) {//修改数据并保存
       const _this = this
       this.$refs[formName].validate((valid) => {

@@ -54,7 +54,7 @@
                     <font color="#6DD2F7" size="-1" face="Lucida Console">《哔哩哔哩弹幕网账号中心规范》</font>
                 </p>
 
-                <center><input class="loginbutton" type="submit"  value="立即注册" ></center>
+                <center><input class="loginbutton" type="submit"  value="立即注册" @click="register"></center>
 
             </div>
 
@@ -110,6 +110,12 @@ export default {
             RegisterBody.style.cssText="zoom: 0.77;height:625px;margin-top:-20px;";
         }
     },
+    register(){
+        this.$message({
+          message: '暂时不开放注册',
+          type: 'warning'
+        });
+    }
   },
   mounted:function(){
       this.GetWindowHeight();

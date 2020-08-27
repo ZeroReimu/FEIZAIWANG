@@ -75,14 +75,21 @@ export default {
     };
   },
   methods:{
-    PhotoHeight(){
+    //检测页面高度并调整
+    GetWindowHeight(){
       var Height=this.utils.AutoHeight();
-      var PhotoHeight=document.getElementById("photobody");
-      PhotoHeight.style.cssText="height:"+Height+"px;";
+      var WindowHeight=window.screen.height;
+      if (WindowHeight < 1000){
+          photobody.style.cssText="zoom: 0.8;height:"+Height+"px;";
+      }else{
+          photobody.style.cssText="zoom: 1;height:"+Height+"px;";
+      }
     }
   },
+
   mounted:function(){
-    this.PhotoHeight()
+    //this.PhotoHeight();
+    this.GetWindowHeight();
   },
   components: {
     TopHeader,
@@ -129,7 +136,8 @@ body{
 }
 .box .imgBox{
     position: absolute;
-    top: 0;     left: 0;
+    top: 0;     
+    left: 0;
     width: 100%;
     height: 100%;
     padding: 10px;

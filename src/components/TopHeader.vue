@@ -140,11 +140,22 @@ export default {
         };
       }
     },
+    //检测页面高度并调整
+    GetWindowHeight(){
+      var zoom=zoom;
+      var WindowHeight=window.screen.height;
+      if (WindowHeight < 1000){ 
+          document.getElementById("Top").style.zoom="0.8";
+      }else{
+          document.getElementById("Top").style.zoom="1";
+      }
+    }
   },
 
   mounted: function () {
     this.nav();
     this.utils.logo();
+    this.GetWindowHeight();
   },
 };
 </script>

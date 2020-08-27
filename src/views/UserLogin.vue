@@ -31,7 +31,7 @@
                     <font color="#6DD2F7" size="-1" face="Lucida Console">《哔哩哔哩弹幕网账号中心规范》</font>
                 </p>
 
-                <center><input type="submit" value="立即登录" class="loginbutton"></center>   
+                <center><input type="submit" value="立即登录" class="loginbutton" @click="login"></center>   
 
             </div>
 
@@ -93,6 +93,12 @@ export default {
             LoginBody.style.cssText="zoom: 0.77;height:600px";
         }
     },
+    login(){
+        this.$message({
+          message: 'Tips : 因不可抗力，登录系统暂时下线',
+          type: 'warning'
+        });
+    }
   },
   mounted:function(){
       this.GetWindowHeight();
