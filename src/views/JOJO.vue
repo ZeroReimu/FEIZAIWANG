@@ -79,8 +79,11 @@ export default {
     GetWindowHeight(){
       var Height=this.utils.AutoHeight();
       var WindowHeight=window.screen.height;
+      console.log(WindowHeight)
       if (WindowHeight < 1000){
-          photobody.style.cssText="zoom: 0.8;height:"+Height+"px;";
+          photobody.style.cssText="zoom: 0.8;";
+          var Height=this.utils.AutoHeight();//因zoom缩小重新获取高度
+          photobody.style.height=Height
       }else{
           photobody.style.cssText="zoom: 1;height:"+Height+"px;";
       }
