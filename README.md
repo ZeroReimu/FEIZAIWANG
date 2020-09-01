@@ -1,6 +1,7 @@
-# feizhaiwang
+# FeiZhaiWang
 
 > A Vue.js project
+> www.acgproject.cn
 
 ## Build Setup
 
