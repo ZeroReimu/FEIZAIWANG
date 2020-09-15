@@ -4,7 +4,7 @@ import Vue from 'vue'
 import './plugins/axios'
 import App from './App'
 import router from './router'
-import Utils from './common/utils.js';
+import Utils from './common/utils.js';//全局方法
 import APlayer from '@moefe/vue-aplayer';//音乐组件
 import VueAwesomeSwiper from 'vue-awesome-swiper'//swiper组件
 import ElementUI from 'element-ui';//饿了吗组件
@@ -14,7 +14,7 @@ Vue.use(APlayer);
 Vue.use(ElementUI);
 Vue.use(VueAwesomeSwiper)
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false;//全局关闭console方法
 Vue.prototype.utils=Utils;
 
 /* eslint-disable no-new */

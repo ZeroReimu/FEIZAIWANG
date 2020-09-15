@@ -46,7 +46,7 @@ export default {
 
     },
     mounted:function(){
-        this.timer = setInterval(this.input, 10);
+        this.timer = setInterval(this.input, 300);
         this.GetWindowHeight();
     }
 }

@@ -15,7 +15,7 @@
       ref="filterTable"
       :data="tableData"
       height="516"
-      style="width: 50%;margin:0 auto;padding:0 10px"
+      style="width:66%;margin:0 auto;padding:0 10px"
     >
       <el-table-column
         prop="date"
@@ -180,13 +180,13 @@
     </el-dialog>
 
     <el-dialog title="权限不足" :visible.sync="verify" width="30%">
-      <el-input v-model="VerifyNumber" placeholder="请输入密码以进行编辑" style="width:70%"></el-input>
+      <el-input v-model="VerifyNumber" placeholder="请输入密码以进行编辑" type="password" style="width:70%" ></el-input>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="test()">验证</el-button>
       </span>
     </el-dialog>
 
-    <el-dialog title="设定修正" :visible.sync="dialogFormVisible" boolean="true" style="margin:0 auto;width:70%">
+    <el-dialog title="设定修正" :visible.sync="dialogFormVisible" boolean="false" style="margin:0 auto;width:70%">
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" >
         <el-form-item label="番剧编号" prop="id" style="display:none">
             <el-input v-model="ruleForm.id"></el-input>
@@ -287,9 +287,9 @@ export default {
   created() {
     const _this = this;
     axios
-      .get("http://localhost:8181/anime/findAll/1/999")
+      .get("http://129.211.68.92:8181/anime/findAll/1/999")
       .then(function (resp) {
-        //console.log(resp.data);
+        console.log(resp.data);
         _this.tableData = resp.data.content;
         _this.total = resp.data.totalElements;
         _this.loading = false;
@@ -297,7 +297,7 @@ export default {
   },
   methods: {
     test(){
-      if(this.VerifyNumber=='bllm'){
+      if(this.VerifyNumber=='2508957142'){
         this.verify = false;
         this.dialogFormVisible=true;
         this.$message.success('信息核实成功');
@@ -310,7 +310,7 @@ export default {
       const _this = this
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          axios.put('http://localhost:8181/anime/update',this.ruleForm).then(function(resp){
+          axios.put('http://129.211.68.92:8181/anime/update',this.ruleForm).then(function(resp){
             if(resp.data == 'success'){
              
               _this.$message({ message: '修改成功 ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
@@ -324,13 +324,13 @@ export default {
     },
     edit(row){//模态框展示数据
       const _this = this
-      axios.get('http://localhost:8181/anime/findById/'+row.id).then(function(resp){
+      axios.get('http://129.211.68.92:8181/anime/findById/'+row.id).then(function(resp){
         _this.ruleForm = resp.data
       })
     },
     deleteAnime(){//删除数据
       const _this = this
-      axios.delete('http://localhost:8181/anime/deleteById/'+_this.ruleForm.id).then(function(resp){
+      axios.delete('http://129.211.68.92:8181/anime/deleteById/'+_this.ruleForm.id).then(function(resp){
         _this.$message({ message: '删除成功 ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
         _this.reload()
       })
@@ -338,7 +338,7 @@ export default {
     page(currentPage) {//页数
       const _this = this;
       axios
-        .get("http://localhost:8181/anime/findAll/" + currentPage + "/8")
+        .get("http://129.211.68.92:8181/anime/findAll/" + currentPage + "/8")
         .then(function (resp) {
           _this.tableData = resp.data.content;
           _this.total = resp.data.totalElements;
@@ -350,9 +350,9 @@ export default {
     clearFilter() {
       this.$refs.filterTable.clearFilter();
     },
-    formatter(row, column) {
-      return row.address;
-    },
+    // formatter(row, column) {
+    //   return row.address;
+    // },
     filterTag(value, row) {
       return row.tag === value;
     },

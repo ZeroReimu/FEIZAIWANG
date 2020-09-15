@@ -32,7 +32,7 @@ export default {
   created() {
 
     const _this = this;
-    axios.get("http://localhost:8181/anime/findAll/1/999").then(function (resp) {
+    axios.get("http://129.211.68.92:8181/anime/findAll/1/999").then(function (resp) {
       // console.log(resp.data);
       _this.tableData = resp.data.content;
       _this.total = resp.data.totalElements
@@ -41,7 +41,7 @@ export default {
   methods: {
     page(currentPage){
       const _this = this;
-      axios.get("http://localhost:8181/anime/findAll/"+currentPage+"/8").then(function (resp) {
+      axios.get("http://129.211.68.92:8181/anime/findAll/"+currentPage+"/8").then(function (resp) {
       console.log(resp.data);
       _this.tableData = resp.data.content;
       _this.total = resp.data.totalElements

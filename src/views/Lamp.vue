@@ -112,6 +112,7 @@ export default {
   name: 'Lamp',
   data(){
     return{
+      classList:null,
       PhotoMsg:{
         TopImg:"http://cdn.acgproject.cn/banner-9.png",
         TopNavImg:"http://cdn.acgproject.cn/banner-9.png",
@@ -135,7 +136,7 @@ export default {
             this.add_class("nix_" + target + "_" + val, "nix_open");
         },
 
-        tog_class(id, cl) {
+        tog_class(id, cl,classList) {
             var elem = document.getElementById(id);
             if (elem.classList.contains(cl) === true) {
                 elem.classList.remove(cl);
@@ -144,14 +145,14 @@ export default {
             }
         },
 
-        add_class(id, cl) {
+        add_class(id, cl,classList) {
             var elem = document.getElementById(id);
             if (elem.classList.contains(cl) !== true) {
                 elem.classList.add(cl);
             }
         },
 
-        rem_class(id, cl) {
+        rem_class(id, cl,classList) {
             var elem = document.getElementById(id);
             if (elem.classList.contains(cl) === true) {
                 elem.classList.remove(cl);

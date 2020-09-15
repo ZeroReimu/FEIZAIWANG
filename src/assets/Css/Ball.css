@@ -3,12 +3,6 @@
         height:830px;
         background:black;
     }
-    
-    .ballbodysmall{
-      width: 100%;
-      height:830px;
-      background:black;
-  }
 
     .ball {
         position: relative;

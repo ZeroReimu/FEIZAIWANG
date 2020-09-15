@@ -3,7 +3,7 @@
     
     <div id="music" style="top:200px"><aplayer :audio="audio" :lrcType="0" 
      style="position:fixed;top:178px;z-index:999"/></div>
-     
+     <el-button plain style="display:none"> 可自动关闭 </el-button>
    <router-view v-if="isRouterAlive"></router-view>
    
   </div>
@@ -91,13 +91,24 @@ export default {
     };
   },
 
-  methods: {//组件刷新
+  methods: {
+    //组件刷新
     reload () {
         this.isRouterAlive = false;            //先关闭，
         this.$nextTick(function () {
             this.isRouterAlive = true;         //再打开
         }) 
-    }
+    },
+    //提示弹框
+     tips() {
+        const h = this.$createElement;
+        this.$notify({
+          title: 'Ohhhhhhh',
+          message: h('i', { style: 'color: teal'}, '欢迎来到我的草窝    ヾ(ﾟ∀ﾟゞ)'),
+          offset: 100,
+          showClose: false
+        });
+      },
   },
   
   created () {
@@ -110,13 +121,19 @@ export default {
           pluginModelPath: 'Live2D',
           tagMode: true,
           debug: false,
-          model: { scale: 1.3,jsonPath: '../static/Live2D/niepudun/model.json' },
-          display: { position: 'left', width: 320, height:390 ,hOffset: -20,vOffset: 0},
+          model: { scale: 1,jsonPath: '../static/Live2D/niepudun/model.json' },
+          display: { position: 'left', width: 320, height:390 ,hOffset: -50,vOffset: -50},
+          // model: { scale: 1.3,jsonPath: '../static/Live2D/niepudun/model.json' },
+          // display: { position: 'left', width: 320, height:390 ,hOffset: -20,vOffset: 0},
           mobile: { show: true },
           log: true
           })
       }, 1000)
-      //console.log = function() {}
+      console.log = function() {}
+  },
+
+  mounted: function () {
+    this.tips()
   },
   
 }

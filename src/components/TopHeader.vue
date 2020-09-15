@@ -10,7 +10,7 @@
           </li>
 
           <li class="One">
-            <router-link to="/" active-class="span">
+            <router-link to="/Anime" active-class="span">
               <span>动漫</span>
             </router-link>
             <ul>
@@ -28,7 +28,7 @@
           </li>
 
           <li class="One">
-            <router-link to="/CodeRain" active-class="span">
+            <router-link to="/Lamp" active-class="span">
               <span>创意</span>
             </router-link>
             <ul>
@@ -60,29 +60,23 @@
                   <span>图片流</span>
                 </li>
               </router-link>
-              <router-link to="/" active-class="span">
+              <router-link to="/CodeRain" active-class="span">
                 <li>
-                  <span>3.1</span>
+                  <span>代码雨</span>
                 </li>
               </router-link>
             </ul>
           </li>
 
           <li class="One">
-            <router-link to="/" active-class="span">
-              <span>日记</span>
-            </router-link>
+              <a href='/'>项目</a>
             <ul>
-              <router-link to="/" active-class="span">
                 <li>
-                  <span>4.1</span>
+                  <a href='http://github.com'>GitHub</a>
                 </li>
-              </router-link>
-              <router-link to="/" active-class="span">
                 <li>
-                  <span>4.2</span>
+                  <a href='http://console.cloud.tencent.com/cvm/instance/index?rid=4'>实例</a>
                 </li>
-              </router-link>
             </ul>
           </li>
 
@@ -118,6 +112,7 @@ export default {
     return {};
   },
   methods: {
+    
     //下拉菜单
     nav() {
       var nav = document.getElementById("Nav");

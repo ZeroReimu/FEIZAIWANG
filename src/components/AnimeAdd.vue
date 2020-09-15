@@ -93,7 +93,7 @@ export default {
         this.$refs[formName].validate((valid) => {
           if (valid) {
             console.log(_this.ruleForm);
-            axios.post('http://localhost:8181/anime/save',this.ruleForm).then(function(resp){
+            axios.post('http://129.211.68.92:8181/anime/save',this.ruleForm).then(function(resp){
               if(resp.data == 'success'){
                 _this.$message({ message: '恭喜你，成功喜加一ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
                 _this.$router.push('/AnimeList')

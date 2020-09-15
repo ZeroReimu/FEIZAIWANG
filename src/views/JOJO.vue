@@ -62,7 +62,6 @@ import TopHeader from "@/components/TopHeader";
 import Animation from "@/components/Animation";
 import Navigatio from "@/components/Navigatio";
 import Footer from "@/components/Footer";
-import Note from "@/components/Note";
 export default {
   name: "JOJO",
   data() {
@@ -79,7 +78,6 @@ export default {
     GetWindowHeight(){
       var Height=this.utils.AutoHeight();
       var WindowHeight=window.screen.height;
-      console.log(WindowHeight)
       if (WindowHeight < 1000){
           photobody.style.cssText="zoom: 0.8;";
           var Height=this.utils.AutoHeight();//因zoom缩小重新获取高度
@@ -98,7 +96,6 @@ export default {
     TopHeader,
     Navigatio,
     Footer,
-    Note
   }
 };
 </script>
@@ -115,10 +112,10 @@ body{
     width:100%;
     display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
-    flex-wrap: wrap;
-    height: 800px;
+    text-align: center;
+    flex-wrap: wrap;/*拆行*/
+    height: 700px; /*800px*/
     background: black;
     box-sizing: border-box;
     font-family: "Cambria Math",sans-serif;
@@ -135,8 +132,8 @@ body{
     transition: 0.5s;
     background: #060c21;
     float: left;
-    
 }
+
 .box .imgBox{
     position: absolute;
     top: 0;     
@@ -146,21 +143,21 @@ body{
     padding: 10px;
     box-sizing: border-box;
 }
+
 .box:hover{
     height: 500px;
 }
+
 .box .imgBox img{
     max-width:100%;
     opacity: 0.1;
     transition: 0.5s;
-
-
-
 }
+
 .box:hover .imgBox img{
      opacity: 1;
-
 }
+
 .box:before{
     content: "";
     position: absolute;
