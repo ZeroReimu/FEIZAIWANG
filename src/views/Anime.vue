@@ -2,7 +2,7 @@
   <div>
     <TopHeader :msg="PhotoMsg"></TopHeader>
     <router-view></router-view>
-    <Footer></Footer>
+    <Footer style="position: relative;padding-bottom:15px;bottom:0"></Footer>
 
     <Navigatio></Navigatio>
   </div>
@@ -32,7 +32,7 @@ export default {
   created() {
 
     const _this = this;
-    axios.get("http://localhost:8181/anime/findAll/1/999").then(function (resp) {
+    axios.get("http://www.acgproject.cn:8181/anime/findAll/1/999").then(function (resp) {
       // console.log(resp.data);
       _this.tableData = resp.data.content;
       _this.total = resp.data.totalElements
@@ -41,7 +41,7 @@ export default {
   methods: {
     page(currentPage){
       const _this = this;
-      axios.get("http://localhost:8181/anime/findAll/"+currentPage+"/8").then(function (resp) {
+      axios.get("http://www.acgproject.cn:8181/anime/findAll/"+currentPage+"/8").then(function (resp) {
       console.log(resp.data);
       _this.tableData = resp.data.content;
       _this.total = resp.data.totalElements

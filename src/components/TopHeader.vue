@@ -60,9 +60,9 @@
                   <span>图片流</span>
                 </li>
               </router-link>
-              <router-link to="/" active-class="span">
+              <router-link to="/CanvasBackground" active-class="span">
                 <li>
-                  <span>3.1</span>
+                  <span>一言</span>
                 </li>
               </router-link>
             </ul>

@@ -110,8 +110,8 @@ export default {
           pluginModelPath: 'Live2D',
           tagMode: true,
           debug: false,
-          model: { scale: 1.3,jsonPath: '../static/Live2D/niepudun/model.json' },
-          display: { position: 'left', width: 320, height:390 ,hOffset: -20,vOffset: 0},
+          model: { scale: 1.0,jsonPath: '../static/Live2D/niepudun/model.json' },
+          display: { position: 'left', width: 320, height:390 ,hOffset: -50,vOffset:-50},
           mobile: { show: true },
           log: true
           })
