@@ -97,6 +97,10 @@ export default {
         this.$nextTick(function () {
             this.isRouterAlive = true;         //再打开
         }) 
+    },
+    _isMobile() {
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag;
     }
   },
   
@@ -116,10 +120,20 @@ export default {
           log: true
           })
       }, 1000)
-      //console.log = function() {}
+      console.log = function() {}
   },
-  
+ 
+  mounted() {
+    if (this._isMobile()) {
+      alert("在做了在做了，建好文件夹了");
+      this.$router.replace('/PhonePage');
+    } else {
+      alert("欢迎回来=v=");
+      this.$router.replace('/HomePage');
+    }
+  }
 }
+
 
 </script>
 

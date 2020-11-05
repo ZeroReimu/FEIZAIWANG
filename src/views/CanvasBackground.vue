@@ -32,18 +32,22 @@ export default {
       }
     };
   },
+
   methods: {
+
     yiyan:function(){
-      axios.get('https://v1.hitokoto.cn/?c=a&c=b&c=c')
+      //axios.get('https://v1.hitokoto.cn/?c=a&c=b&c=c')//一言地址 a:动画 b:漫画 c:游戏
+      axios.get('https://v1.hitokoto.cn/?c=h&c=i&c=k')//h:影视 i:诗词 k:哲学
         .then(({ data }) => {
           const hitokoto = document.getElementById('hitokoto_text')
           const hitokoto_from = document.getElementById('hitokoto_from')
-          //hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
-          hitokoto.innerText = data.hitokoto
-          hitokoto_from.innerText = data.from
+          //hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid //返回一言信息
+          hitokoto.innerText = data.hitokoto //返回一言正文
+          hitokoto_from.innerText = data.from //返回出处
         })
-        .catch(console.error)
+        .catch(console.error) // 报错
     },
+
     //检测页面高度并调整
     GetWindowHeight() {
       var Height = this.utils.AutoHeight();

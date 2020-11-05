@@ -25,6 +25,9 @@ export default {
             a.style.cssText="zoom: 0.95;";
         }
     },
+    // scrollTopBlack(){
+    //   window.scrollTo(0,0);
+    // }
   },
   mounted:function(){
       this.GetWindowHeight();
