@@ -2,7 +2,7 @@
   <div>
     <TopHeader :msg="PhotoMsg"></TopHeader>
     <router-view></router-view>
-    <Footer></Footer>
+    <Footer style="position: relative;padding-bottom:15px;bottom:0"></Footer>
 
     <Navigatio></Navigatio>
   </div>

@@ -25,6 +25,9 @@ export default {
             a.style.cssText="zoom: 0.95;";
         }
     },
+    // scrollTopBlack(){
+    //   window.scrollTo(0,0);
+    // }
   },
   mounted:function(){
       this.GetWindowHeight();
@@ -33,7 +36,7 @@ export default {
 </script>
 
 <style scoped>
-  #Footer {
+  /* #Footer {
     position: relative;
     text-align: center;
     font-family: Sans-serif;
@@ -43,6 +46,19 @@ export default {
     margin: 0 auto;
     z-index:20;
     padding-bottom:15px;
+    box-shadow: 10px 2px 20px #7d7d7d;
+  } */
+
+  #Footer {
+    position: fixed;
+    text-align: center;
+    font-family: Sans-serif;
+    font-size: 15px;
+    line-height: 28px;
+    width: 100%;
+    margin: 0 auto;
+    z-index:20;
+    bottom:15px;
     /* box-shadow: 10px 2px 20px #7d7d7d; */
   }
 </style>

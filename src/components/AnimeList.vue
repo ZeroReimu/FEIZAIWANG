@@ -15,7 +15,7 @@
       ref="filterTable"
       :data="tableData"
       height="516"
-      style="width:66%;margin:0 auto;padding:0 10px"
+      style="width: 53%;margin:0 auto;padding:0 10px"
     >
       <el-table-column
         prop="date"

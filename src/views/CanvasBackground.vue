@@ -1,9 +1,15 @@
 <template>
   <div>
     <TopHeader :msg="PhotoMsg"></TopHeader>
-    <div id="Background">
+    <div id="Background"  @click="yiyan()">
+      
+      <div class="instructions" >
+        <div id="hitokoto">
+          『 <a id="hitokoto_text"  >我从未惧怕孤独，直到我遇见了你</a> 』<br>
+          <div>--《<a id="hitokoto_from">本人</a>》</div>
+        </div>
+      </div>
       <Background></Background>
-      <div class="instructions">我从未惧怕孤独，直到我遇见了你</div>
     </div>
     <!-- <Footer></Footer> -->
     <Navigatio></Navigatio>
@@ -26,7 +32,22 @@ export default {
       }
     };
   },
+
   methods: {
+
+    yiyan:function(){
+      //axios.get('https://v1.hitokoto.cn/?c=a&c=b&c=c')//一言地址 a:动画 b:漫画 c:游戏
+      axios.get('https://v1.hitokoto.cn/?c=h&c=i&c=k')//h:影视 i:诗词 k:哲学
+        .then(({ data }) => {
+          const hitokoto = document.getElementById('hitokoto_text')
+          const hitokoto_from = document.getElementById('hitokoto_from')
+          //hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid //返回一言信息
+          hitokoto.innerText = data.hitokoto //返回一言正文
+          hitokoto_from.innerText = data.from //返回出处
+        })
+        .catch(console.error) // 报错
+    },
+
     //检测页面高度并调整
     GetWindowHeight() {
       var Height = this.utils.AutoHeight();
@@ -37,14 +58,20 @@ export default {
   },
   mounted: function() {
     this.GetWindowHeight();
+    this.yiyan()
+
   },
   components: {
     TopHeader,
     Navigatio,
     Footer,
     Background
-  }
+  },
+
 };
+
+
+      
 </script>
 
 <style scoped>
@@ -64,7 +91,19 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   pointer-events: none;
+}
+.instructions>div{
+  font-size:20px;
+  width: auto;
+}
+.instructions>div>a{
+  color:#fff;
+}
+.instructions>div>div{
+  margin-top:5%;
+  margin-right:-60px;
+  float:right;
 }
 </style>

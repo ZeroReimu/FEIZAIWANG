@@ -100,7 +100,7 @@ export default {
         }) 
     },
     //提示弹框
-     tips() {
+    tips() {
         const h = this.$createElement;
         this.$notify({
           title: 'Ohhhhhhh',
@@ -108,7 +108,11 @@ export default {
           offset: 100,
           showClose: false
         });
-      },
+    },
+    _isMobile() {
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag;
+    }
   },
   
   created () {
@@ -121,22 +125,26 @@ export default {
           pluginModelPath: 'Live2D',
           tagMode: true,
           debug: false,
-          model: { scale: 1,jsonPath: '../static/Live2D/niepudun/model.json' },
-          display: { position: 'left', width: 320, height:390 ,hOffset: -50,vOffset: -50},
-          // model: { scale: 1.3,jsonPath: '../static/Live2D/niepudun/model.json' },
-          // display: { position: 'left', width: 320, height:390 ,hOffset: -20,vOffset: 0},
+          model: { scale: 1.0,jsonPath: '../static/Live2D/niepudun/model.json' },
+          display: { position: 'left', width: 320, height:390 ,hOffset: -50,vOffset:-50},
           mobile: { show: true },
           log: true
           })
       }, 1000)
       console.log = function() {}
   },
-
-  mounted: function () {
-    this.tips()
-  },
-  
+ 
+  mounted() {
+    this.tips();
+    if (this._isMobile()) {
+      alert("在做了在做了，建好文件夹了");
+      this.$router.replace('/PhonePage');
+    } else {
+      this.$router.replace('/HomePage');
+    }
+  }
 }
+
 
 </script>
 

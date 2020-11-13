@@ -94,6 +94,11 @@ export default new Router({
         }
       ]
     },
+    {
+      path:'/PhonePage',
+      name:'PhonePage',
+      component:() => import('../views/PhonePage'),
+    },
   ],
   
 })
