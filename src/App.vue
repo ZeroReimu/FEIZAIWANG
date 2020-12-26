@@ -120,12 +120,12 @@ export default {
       //Live2D导入
       setTimeout(() => {
           window.L2Dwidget.init({
-          pluginRootPath: 'static/Live2D/',
-          pluginJsPath: 'lib/',
-          pluginModelPath: 'Live2D',
+          pluginRootPath: 'http://cdn.acgproject.cn/static/Live2D/',
+          pluginJsPath: 'http://cdn.acgproject.cn/static/Live2D/lib/',
+          pluginModelPath: 'http://cdn.acgproject.cn/static/Live2D',
           tagMode: true,
           debug: false,
-          model: { scale: 1.0,jsonPath: '../static/Live2D/niepudun/model.json' },
+          model: { scale: 1.0,jsonPath: 'http://cdn.acgproject.cn/static/Live2D/niepudun/model.json' },
           display: { position: 'left', width: 320, height:390 ,hOffset: -50,vOffset:-50},
           mobile: { show: true },
           log: true
