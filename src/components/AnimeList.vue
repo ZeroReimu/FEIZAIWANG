@@ -74,7 +74,7 @@
 
       <el-table-column prop="name" label="番 剧" width="280"></el-table-column>
 
-      <el-table-column prop="lead" label="主 要 角 色" width="250"></el-table-column>
+      <el-table-column prop="leader" label="主 要 角 色" width="250"></el-table-column>
 
       <el-table-column
         prop="tag"
@@ -147,8 +147,8 @@
         <el-form-item label="番剧名称" prop="name">
             <el-input v-model="ruleForm.name" :disabled="true" size="small"></el-input>
         </el-form-item>
-        <el-form-item label="主要人物" prop="lead">
-            <el-input v-model="ruleForm.lead" :disabled="true" size="small"></el-input>
+        <el-form-item label="主要人物" prop="leader">
+            <el-input v-model="ruleForm.leader" :disabled="true" size="small"></el-input>
         </el-form-item>
         <el-form-item label="活动时间" required>
             <el-date-picker prop="date" type="month" :disabled="true" placeholder="选择日期" v-model="ruleForm.date" style="width: 100%" format="yyyy 年 MM 月" value-format="yyyy年MM月" size="small"></el-date-picker>
@@ -194,8 +194,8 @@
         <el-form-item label="番剧名称" prop="name">
             <el-input v-model="ruleForm.name"></el-input>
         </el-form-item>
-        <el-form-item label="主要人物" prop="lead">
-            <el-input v-model="ruleForm.lead"></el-input>
+        <el-form-item label="主要人物" prop="leader">
+            <el-input v-model="ruleForm.leader"></el-input>
         </el-form-item>
         <el-form-item label="活动时间" required>
             <el-date-picker prop="date" type="month" placeholder="选择日期" v-model="ruleForm.date" style="width: 100%" format="yyyy 年 MM 月" value-format="yyyy年MM月"></el-date-picker>
@@ -269,7 +269,7 @@ export default {
         name: [
           { required: true, message: '请输入番剧名称', trigger: 'blur' },
         ],
-        lead: [
+        leader: [
           { required: true, message: '请输入主人公名称', trigger: 'blur' },
         ],
         date: [
@@ -287,7 +287,7 @@ export default {
   created() {
     const _this = this;
     axios
-      .get("http://8.129.174.145:8181/anime/findAll/1/999")
+      .get("https://acgproject.cn:8181/anime/findAll/1/999")
       .then(function (resp) {
         console.log(resp.data);
         _this.tableData = resp.data.content;
@@ -310,7 +310,7 @@ export default {
       const _this = this
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          axios.put('http://8.129.174.145:8181/anime/update',this.ruleForm).then(function(resp){
+          axios.put('https://acgproject.cn:8181/anime/update',this.ruleForm).then(function(resp){
             if(resp.data == 'success'){
              
               _this.$message({ message: '修改成功 ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
@@ -324,13 +324,13 @@ export default {
     },
     edit(row){//模态框展示数据
       const _this = this
-      axios.get('http://8.129.174.145:8181/anime/findById/'+row.id).then(function(resp){
+      axios.get('https://acgproject.cn:8181/anime/findById/'+row.id).then(function(resp){
         _this.ruleForm = resp.data
       })
     },
     deleteAnime(){//删除数据
       const _this = this
-      axios.delete('http://8.129.174.145:8181/anime/deleteById/'+_this.ruleForm.id).then(function(resp){
+      axios.delete('https://acgproject.cn:8181/anime/deleteById/'+_this.ruleForm.id).then(function(resp){
         _this.$message({ message: '删除成功 ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
         _this.reload()
       })
@@ -338,7 +338,7 @@ export default {
     page(currentPage) {//页数
       const _this = this;
       axios
-        .get("http://8.129.174.145:8181/anime/findAll/" + currentPage + "/8")
+        .get("https://acgproject.cn:8181/anime/findAll/" + currentPage + "/8")
         .then(function (resp) {
           _this.tableData = resp.data.content;
           _this.total = resp.data.totalElements;

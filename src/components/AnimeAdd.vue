@@ -12,8 +12,8 @@
             <el-input v-model="ruleForm.name"></el-input>
           </el-form-item>
 
-          <el-form-item label="主要人物" prop="lead">
-            <el-input v-model="ruleForm.lead"></el-input>
+          <el-form-item label="主要人物" prop="leader">
+            <el-input v-model="ruleForm.leader"></el-input>
           </el-form-item>
 
           <el-form-item label="活动时间" required>
@@ -59,7 +59,7 @@ export default {
     return {
       ruleForm: {
           name: '',//书名
-          lead:'',//主人公
+          leader:'',//主人公
           date: '',//日期
           tag: [],//类型
           score: '',//评价
@@ -69,7 +69,7 @@ export default {
           name: [
             { required: true, message: '请输入番剧名称', trigger: 'blur' },
           ],
-          lead: [
+          leader: [
             { required: true, message: '请输入主人公名称', trigger: 'blur' },
           ],
           date: [
@@ -93,7 +93,7 @@ export default {
         this.$refs[formName].validate((valid) => {
           if (valid) {
             console.log(_this.ruleForm);
-            axios.post('http://8.129.174.145:8181/anime/save',this.ruleForm).then(function(resp){
+            axios.post('https://acgproject.cn:8181/anime/save',this.ruleForm).then(function(resp){
               if(resp.data == 'success'){
                 _this.$message({ message: '恭喜你，成功喜加一ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
                 _this.$router.push('/AnimeList')
