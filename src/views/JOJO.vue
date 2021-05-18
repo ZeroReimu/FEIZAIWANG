@@ -4,7 +4,7 @@
     <div id="photobody">
       <div class="box">
         <div class="imgBox">
-          <img src="http://cdn.acgproject.cn/JO1_gaitubao_1200x1630.jpg" alt="">
+          <img src="https://cdn.acgproject.cn/JO1_gaitubao_1200x1630.jpg" alt="">
         </div>
         <div class="content">
           <h2>乔纳森·乔斯达<br><br>
@@ -14,7 +14,7 @@
 
       <div class="box">
         <div class="imgBox">
-          <img src="http://cdn.acgproject.cn/JO2_gaitubao_1200x1630.jpg" alt="">
+          <img src="https://cdn.acgproject.cn/JO2_gaitubao_1200x1630.jpg" alt="">
         </div>
         <div class="content">
           <h2>乔瑟夫·乔斯达<br><br>
@@ -24,7 +24,7 @@
 
       <div class="box">
         <div class="imgBox">
-          <img src="http://cdn.acgproject.cn/JO3_gaitubao_1200x1630.jpg" alt="">
+          <img src="https://cdn.acgproject.cn/JO3_gaitubao_1200x1630.jpg" alt="">
         </div>
         <div class="content">
           <h2>空条承太郎<br><br>
@@ -34,7 +34,7 @@
 
       <div class="box">
         <div class="imgBox">
-          <img src="http://cdn.acgproject.cn/JO4_gaitubao_1200x1630.jpg" alt="">
+          <img src="https://cdn.acgproject.cn/JO4_gaitubao_1200x1630.jpg" alt="">
         </div>
         <div class="content">
           <h2>东方仗助<br><br>
@@ -44,7 +44,7 @@
 
       <div class="box">
         <div class="imgBox">
-          <img src="http://cdn.acgproject.cn/JO5_gaitubao_1200x1630.jpg" alt="">
+          <img src="https://cdn.acgproject.cn/JO5_gaitubao_1200x1630.jpg" alt="">
         </div>
         <div class="content">
           <h2>乔鲁诺·乔巴拿<br><br>
@@ -67,9 +67,9 @@ export default {
   data() {
     return {
       PhotoMsg: {
-        TopImg: "http://cdn.acgproject.cn/banner-7.png",
-        TopNavImg:"http://cdn.acgproject.cn/banner-7.png",
-        Logo: "http://cdn.acgproject.cn/logo-7.png"
+        TopImg: "https://cdn.acgproject.cn/banner-7.png",
+        TopNavImg:"https://cdn.acgproject.cn/banner-7.png",
+        Logo: "https://cdn.acgproject.cn/logo-7.png"
       }
     };
   },

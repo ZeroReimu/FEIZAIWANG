@@ -6,7 +6,7 @@
       <a href>殿堂图库</a> |
       <a href>友情链接</a>
       <br />copyright [c]2018-2020 深圳市肥宅科技不存在公司
-      <a href="http://beian.miit.gov.cn">粤ICP备20007972号</a> 邮编：518054 电话：0755-17688741340
+      <a href="https://beian.miit.gov.cn">粤ICP备20007972号</a> 邮编：518054 电话：0755-17688741340
     </div>
 </template>
 

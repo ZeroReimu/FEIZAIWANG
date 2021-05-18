@@ -287,7 +287,7 @@ export default {
   created() {
     const _this = this;
     axios
-      .get("http://129.211.68.92:8181/anime/findAll/1/999")
+      .get("http://8.129.174.145:8181/anime/findAll/1/999")
       .then(function (resp) {
         console.log(resp.data);
         _this.tableData = resp.data.content;
@@ -310,7 +310,7 @@ export default {
       const _this = this
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          axios.put('http://129.211.68.92:8181/anime/update',this.ruleForm).then(function(resp){
+          axios.put('http://8.129.174.145:8181/anime/update',this.ruleForm).then(function(resp){
             if(resp.data == 'success'){
              
               _this.$message({ message: '修改成功 ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
@@ -324,13 +324,13 @@ export default {
     },
     edit(row){//模态框展示数据
       const _this = this
-      axios.get('http://129.211.68.92:8181/anime/findById/'+row.id).then(function(resp){
+      axios.get('http://8.129.174.145:8181/anime/findById/'+row.id).then(function(resp){
         _this.ruleForm = resp.data
       })
     },
     deleteAnime(){//删除数据
       const _this = this
-      axios.delete('http://129.211.68.92:8181/anime/deleteById/'+_this.ruleForm.id).then(function(resp){
+      axios.delete('http://8.129.174.145:8181/anime/deleteById/'+_this.ruleForm.id).then(function(resp){
         _this.$message({ message: '删除成功 ヽ(✿ﾟ▽ﾟ)ノ', type: 'success' });
         _this.reload()
       })
@@ -338,7 +338,7 @@ export default {
     page(currentPage) {//页数
       const _this = this;
       axios
-        .get("http://129.211.68.92:8181/anime/findAll/" + currentPage + "/8")
+        .get("http://8.129.174.145:8181/anime/findAll/" + currentPage + "/8")
         .then(function (resp) {
           _this.tableData = resp.data.content;
           _this.total = resp.data.totalElements;

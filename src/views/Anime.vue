@@ -17,9 +17,9 @@ export default {
   data() {
     return {
       PhotoMsg: {
-        TopImg: "http://cdn.acgproject.cn/banner-10.png",
-        TopNavImg: "http://cdn.acgproject.cn/banner-10.png",
-        Logo: "http://cdn.acgproject.cn/logo-10.png",
+        TopImg: "https://cdn.acgproject.cn/banner-10.png",
+        TopNavImg: "https://cdn.acgproject.cn/banner-10.png",
+        Logo: "https://cdn.acgproject.cn/logo-10.png",
       },
       total:null,
       tableData: [
@@ -32,7 +32,7 @@ export default {
   created() {
 
     const _this = this;
-    axios.get("http://129.211.68.92:8181/anime/findAll/1/999").then(function (resp) {
+    axios.get("http://8.129.174.145:8181/anime/findAll/1/999").then(function (resp) {
       // console.log(resp.data);
       _this.tableData = resp.data.content;
       _this.total = resp.data.totalElements
@@ -41,7 +41,7 @@ export default {
   methods: {
     page(currentPage){
       const _this = this;
-      axios.get("http://129.211.68.92:8181/anime/findAll/"+currentPage+"/8").then(function (resp) {
+      axios.get("http://8.129.174.145:8181/anime/findAll/"+currentPage+"/8").then(function (resp) {
       console.log(resp.data);
       _this.tableData = resp.data.content;
       _this.total = resp.data.totalElements

@@ -24,6 +24,11 @@
                   <span>收录</span>
                 </li>
               </router-link>
+              <router-link to="/Test" active-class="span">
+                <li>
+                  <span>测试</span>
+                </li>
+              </router-link>
             </ul>
           </li>
 

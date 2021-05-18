@@ -95,9 +95,9 @@ export default {
   data(){
     return{
       PhotoMsg:{
-        TopImg:"http://cdn.acgproject.cn/banner-5.png",
-        TopNavImg:"http://cdn.acgproject.cn/banner-5.png",
-        Logo:"http://cdn.acgproject.cn/logo-5.png",
+        TopImg:"https://cdn.acgproject.cn/banner-5.png",
+        TopNavImg:"https://cdn.acgproject.cn/banner-5.png",
+        Logo:"https://cdn.acgproject.cn/logo-5.png",
       }
     }
   },

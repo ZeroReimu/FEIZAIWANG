@@ -71,12 +71,12 @@ export default {
   name: 'UserLogin',
   data(){
     return{
-      QRcode:"http://cdn.acgproject.cn/QRcode.png",
-      twothree:"http://cdn.acgproject.cn/logo2233.png",
+      QRcode:"https://cdn.acgproject.cn/QRcode.png",
+      twothree:"https://cdn.acgproject.cn/logo2233.png",
       PhotoMsg:{
-        TopImg:"http://cdn.acgproject.cn/banner-8.png",
-        TopNavImg:"http://cdn.acgproject.cn/banner-8.png",
-        Logo:"http://cdn.acgproject.cn/logo-8.png",
+        TopImg:"https://cdn.acgproject.cn/banner-8.png",
+        TopNavImg:"https://cdn.acgproject.cn/banner-8.png",
+        Logo:"https://cdn.acgproject.cn/logo-8.png",
       }
     };
   },
