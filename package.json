@@ -14,7 +14,7 @@
     "babel-plugin-transform-remove-strict-mode": "0.0.2",
     "element-ui": "^2.13.2",
     "hls.js": "^0.14.0",
-    "swiper": "^5.4.1",
+    "swiper": "^6.5.1",
     "vue": "^2.5.2",
     "vue-aplayer": "^1.6.1",
     "vue-awesome-swiper": "^4.1.1"
