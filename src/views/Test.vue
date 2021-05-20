@@ -9,25 +9,33 @@
 </template>
 
 <script>
+import TopHeader from '@/components/TopHeader'
+import Navigatio from '@/components/Navigatio'
+import utils from '@/common/utils'
 export default {
-  name: "AnimeAdd",
+  name: "Test",
   data() {
+    var ramdomSum=utils.sum(1,50);
     return {
-
+      PhotoMsg:{
+        TopImg:"https://cdn.acgproject.cn/banner-"+ramdomSum+".png",
+        TopNavImg:"https://cdn.acgproject.cn/banner-"+ramdomSum+".png",
+        Logo:"https://cdn.acgproject.cn/logo-"+ramdomSum+".png",
+      }
     };
   },
   created() {
-
+   
   },
   methods: {
-    setUsername(){
-        let myName = prompt('请输入你的名字。');
-        localStorage.setItem('name', myName);
-        alert(localStorage.myName)
-    }
+
   },
   mounted: function () {
-    this.setUsername()
+   
   },
+  components:{
+    TopHeader,
+    Navigatio,
+  }
 };
 </script>

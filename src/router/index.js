@@ -47,7 +47,7 @@ export default new VueRouter({
       path: '/Radar',
       name: 'Radar',
       component: () => import('../views/Radar.vue'),
-      meta: { title: '测试' }
+      meta: { title: '雷达' }
     },
     {
       path: '/Ball',
@@ -91,8 +91,15 @@ export default new VueRouter({
           name:'AnimeAdd',
           component: () => import('../components/AnimeAdd.vue'),
           meta: { title: '番剧添加' },
-        }
+        },
+
       ]
+    },
+    {
+      path:'/Test',
+      name:'Test',
+      component: () => import('../views/Test.vue'),
+      meta: { title: '番剧添加' },
     },
     {
       path:'/PhonePage',
